@@ -1,0 +1,28 @@
+{
+  "config": {
+    "datasets": [
+      "BACE",
+      "ESOL"
+    ],
+    "depths": [
+      2,
+      4
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "epochs": 40,
+    "hidden": 32,
+    "lr": 0.003,
+    "setting": "sf_ff_graph_tasks_v2"
+  },
+  "hashes": {
+    "experiments/compare_sf_ff_graph_tasks.py": "109c1f404bffd1c024d3c7ac20ee8e235a90f6387fda8c44adbb8ee8061026e9",
+    "gnn/graph_local.py": "7baaebb7619680c6b15b69dafede77a6aef8103ed3b83569540fd341e490f8ea",
+    "experiments/local_graph_tasks.py": "b246f029597cfef8f180497caacc16d84261c0939807d8e4fa4189c7f8a3caa1"
+  },
+  "torch": "2.10.0",
+  "platform": "macOS-27.0-arm64-arm-64bit"
+}

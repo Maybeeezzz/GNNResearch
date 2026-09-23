@@ -1,0 +1,23 @@
+{
+  "config": {
+    "datasets": [
+      "CiteSeer",
+      "Cora_ML"
+    ],
+    "depths": [
+      2,
+      4
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "epochs": 100,
+    "hidden": 64,
+    "lr": 0.005,
+    "setting": "link_no_virtual_v1"
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "torch": "2.10.0"
+}

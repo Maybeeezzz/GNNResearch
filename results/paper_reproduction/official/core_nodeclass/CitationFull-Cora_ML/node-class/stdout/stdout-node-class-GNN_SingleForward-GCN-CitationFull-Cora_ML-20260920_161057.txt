@@ -1,0 +1,313 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class/stdout/stdout-node-class-GNN_SingleForward-GCN-CitationFull-Cora_ML-20260920_161057.txt
+args:
+{'alternating_update': False,
+ 'append_label': None,
+ 'aug_edge_direction': 'bidirection',
+ 'cuda': False,
+ 'dataset': 'CitationFull-Cora_ML',
+ 'device': device(type='cpu'),
+ 'epochs': 1000,
+ 'exp_datetime': '20260920_161057',
+ 'exp_setting': 'core_nodeclass',
+ 'ff_theta': 2.0,
+ 'gpu': -1,
+ 'grad_max_norm': 1.0,
+ 'loss_fn_name': 'forwardforward_loss_fn',
+ 'lr': 0.001,
+ 'model': 'GNN_SingleForward-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 4,
+ 'num_negs': 2,
+ 'num_runs': 5,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class'),
+ 'seed': 100,
+ 'storable_time_steps': [2, 3, 4, 5, 6, 7, 8, 9],
+ 'task': 'node-class',
+ 'temperature': 1.0,
+ 'test_time_steps': 10,
+ 'val_every': 2,
+ 'val_from': 0}
+
+Starting run-0 of GNN_SingleForward-GCN on CitationFull-Cora_ML (seed=10100)
+
+2026-09-20 16:10:57,126 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(2879, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1-3): 3 x GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+[Layer 0: Epoch-383] Early stop!
+2026-09-20 16:11:29,110 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 4.
+
+[Layer-0] Test Accuracy : 85.98%
+
+[Layer 1: Epoch-449] Early stop!
+2026-09-20 16:11:45,403 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 4.
+
+[Layer-1] Test Accuracy : 86.31%
+
+[Layer 2: Epoch-379] Early stop!
+2026-09-20 16:11:59,594 [INFO] [gnn_sf.forward_train] Finished training layer 3 / 4.
+
+[Layer-2] Test Accuracy : 86.98%
+
+[Layer 3: Epoch-209] Early stop!
+2026-09-20 16:12:08,120 [INFO] [gnn_sf.forward_train] Finished training layer 4 / 4.
+
+[Layer-3] Test Accuracy : 86.81%
+
+2026-09-20 16:12:08,179 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 86.8114% (520/599)
+
+Starting run-1 of GNN_SingleForward-GCN on CitationFull-Cora_ML (seed=10103)
+
+2026-09-20 16:12:08,260 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(2879, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1-3): 3 x GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+[Layer 0: Epoch-397] Early stop!
+2026-09-20 16:12:41,883 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 4.
+
+[Layer-0] Test Accuracy : 89.32%
+
+[Layer 1: Epoch-313] Early stop!
+2026-09-20 16:12:52,999 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 4.
+
+[Layer-1] Test Accuracy : 89.48%
+
+[Layer 2: Epoch-201] Early stop!
+2026-09-20 16:13:00,534 [INFO] [gnn_sf.forward_train] Finished training layer 3 / 4.
+
+[Layer-2] Test Accuracy : 89.65%
+
+[Layer 3: Epoch-205] Early stop!
+2026-09-20 16:13:09,905 [INFO] [gnn_sf.forward_train] Finished training layer 4 / 4.
+
+[Layer-3] Test Accuracy : 89.82%
+
+2026-09-20 16:13:09,965 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 89.8164% (538/599)
+
+Starting run-2 of GNN_SingleForward-GCN on CitationFull-Cora_ML (seed=10106)
+
+2026-09-20 16:13:10,046 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(2879, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1-3): 3 x GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+[Layer 0: Epoch-355] Early stop!
+2026-09-20 16:13:41,264 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 4.
+
+[Layer-0] Test Accuracy : 87.15%
+
+[Layer 1: Epoch-231] Early stop!
+2026-09-20 16:13:49,790 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 4.
+
+[Layer-1] Test Accuracy : 87.48%
+
+[Layer 2: Epoch-353] Early stop!
+2026-09-20 16:14:04,017 [INFO] [gnn_sf.forward_train] Finished training layer 3 / 4.
+
+[Layer-2] Test Accuracy : 88.15%
+
+[Layer 3: Epoch-223] Early stop!
+2026-09-20 16:14:13,760 [INFO] [gnn_sf.forward_train] Finished training layer 4 / 4.
+
+[Layer-3] Test Accuracy : 87.48%
+
+2026-09-20 16:14:13,820 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 87.4791% (524/599)
+
+Starting run-3 of GNN_SingleForward-GCN on CitationFull-Cora_ML (seed=10109)
+
+2026-09-20 16:14:13,900 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(2879, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1-3): 3 x GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+[Layer 0: Epoch-319] Early stop!
+2026-09-20 16:14:43,161 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 4.
+
+[Layer-0] Test Accuracy : 89.48%
+
+[Layer 1: Epoch-233] Early stop!
+2026-09-20 16:14:51,834 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 4.
+
+[Layer-1] Test Accuracy : 89.65%
+
+[Layer 2: Epoch-271] Early stop!
+2026-09-20 16:15:02,918 [INFO] [gnn_sf.forward_train] Finished training layer 3 / 4.
+
+[Layer-2] Test Accuracy : 89.82%
+
+[Layer 3: Epoch-313] Early stop!
+2026-09-20 16:15:16,297 [INFO] [gnn_sf.forward_train] Finished training layer 4 / 4.
+
+[Layer-3] Test Accuracy : 89.82%
+
+2026-09-20 16:15:16,358 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 89.8164% (538/599)
+
+Starting run-4 of GNN_SingleForward-GCN on CitationFull-Cora_ML (seed=10112)
+
+2026-09-20 16:15:16,445 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(2879, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1-3): 3 x GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+[Layer 0: Epoch-305] Early stop!
+2026-09-20 16:15:44,785 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 4.
+
+[Layer-0] Test Accuracy : 86.48%
+
+[Layer 1: Epoch-301] Early stop!
+2026-09-20 16:15:56,216 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 4.
+
+[Layer-1] Test Accuracy : 87.15%
+
+[Layer 2: Epoch-273] Early stop!
+2026-09-20 16:16:07,188 [INFO] [gnn_sf.forward_train] Finished training layer 3 / 4.
+
+[Layer-2] Test Accuracy : 87.48%
+
+[Layer 3: Epoch-201] Early stop!
+2026-09-20 16:16:15,913 [INFO] [gnn_sf.forward_train] Finished training layer 4 / 4.
+
+[Layer-3] Test Accuracy : 87.48%
+
+2026-09-20 16:16:15,974 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 87.4791% (524/599)
+
+Test Performance (5 runs): 88.280468%±1.2775

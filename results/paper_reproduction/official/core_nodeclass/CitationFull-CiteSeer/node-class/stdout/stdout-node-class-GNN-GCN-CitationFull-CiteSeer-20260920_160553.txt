@@ -1,0 +1,102 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-CiteSeer/node-class/stdout/stdout-node-class-GNN-GCN-CitationFull-CiteSeer-20260920_160553.txt
+args:
+{'cuda': False,
+ 'dataset': 'CitationFull-CiteSeer',
+ 'device': device(type='cpu'),
+ 'epochs': 1000,
+ 'exp_datetime': '20260920_160553',
+ 'exp_setting': 'core_nodeclass',
+ 'gpu': -1,
+ 'lr': 0.001,
+ 'model': 'GNN-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 1,
+ 'num_runs': 5,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-CiteSeer/node-class'),
+ 'seed': 100,
+ 'task': 'node-class',
+ 'val_every': 2}
+
+Starting run-0 of GNN-GCN on CitationFull-CiteSeer (seed=10100)
+
+2026-09-20 16:05:53,607 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:05:58,312 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.853428
+
+Starting run-1 of GNN-GCN on CitationFull-CiteSeer (seed=10103)
+
+2026-09-20 16:05:58,325 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:06:02,918 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.884161
+
+Starting run-2 of GNN-GCN on CitationFull-CiteSeer (seed=10106)
+
+2026-09-20 16:06:02,927 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:06:07,721 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.859338
+
+Starting run-3 of GNN-GCN on CitationFull-CiteSeer (seed=10109)
+
+2026-09-20 16:06:07,731 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:06:12,219 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.812057
+
+Starting run-4 of GNN-GCN on CitationFull-CiteSeer (seed=10112)
+
+2026-09-20 16:06:12,229 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:06:16,811 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.804965
+
+Test Performance (5 runs): 0.842790%±0.0299

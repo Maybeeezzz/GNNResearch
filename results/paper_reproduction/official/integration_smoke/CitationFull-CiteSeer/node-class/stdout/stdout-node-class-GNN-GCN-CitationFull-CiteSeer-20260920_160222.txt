@@ -1,0 +1,38 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/integration_smoke/CitationFull-CiteSeer/node-class/stdout/stdout-node-class-GNN-GCN-CitationFull-CiteSeer-20260920_160222.txt
+args:
+{'cuda': False,
+ 'dataset': 'CitationFull-CiteSeer',
+ 'device': device(type='cpu'),
+ 'epochs': 2,
+ 'exp_datetime': '20260920_160222',
+ 'exp_setting': 'integration_smoke',
+ 'gpu': -1,
+ 'lr': 0.001,
+ 'model': 'GNN-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 1,
+ 'num_runs': 1,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/integration_smoke/CitationFull-CiteSeer/node-class'),
+ 'seed': 100,
+ 'task': 'node-class',
+ 'val_every': 2}
+
+Starting run-0 of GNN-GCN on CitationFull-CiteSeer (seed=10100)
+
+2026-09-20 16:02:22,057 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GCN(602, 6, num_layers=1)
+2026-09-20 16:02:22,107 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.145390
+
+Test Performance (1 runs): 0.145390%±0.0000

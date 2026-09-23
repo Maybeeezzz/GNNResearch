@@ -1,0 +1,227 @@
+{
+  "dataset": "ESOL",
+  "depth": 2,
+  "seed": 11,
+  "method": "bp",
+  "task": "regression",
+  "metric": "rmse",
+  "target": 1.4440239667892456,
+  "reached": true,
+  "hit": {
+    "seconds": 0.9929396250081481,
+    "value": 1.4440239667892456,
+    "step": 120,
+    "total_updates": 120
+  },
+  "observed_seconds": 0.9930647919973126,
+  "updates": 120,
+  "stop_reason": "target",
+  "best_final_validation": 1.4440239667892456,
+  "test": {
+    "rmse": 1.3182157278060913,
+    "mae": 1.045724630355835,
+    "r2": 0.4677278399467468
+  },
+  "memory": {
+    "baseline_rss_mib": 470.671875,
+    "sampled_training_peak_rss_mib": 522.265625,
+    "sampled_training_increment_mib": 51.59375,
+    "process_lifetime_peak_until_training_end_mib": 522.265625
+  },
+  "curve": [
+    {
+      "stage": 1,
+      "step": 5,
+      "total_updates": 5,
+      "seconds": 0.06002733300556429,
+      "value": 1.8403823375701904,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 10,
+      "total_updates": 10,
+      "seconds": 0.10108470800332725,
+      "value": 1.8581863641738892,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 15,
+      "total_updates": 15,
+      "seconds": 0.14149400001042522,
+      "value": 1.6789381504058838,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 20,
+      "total_updates": 20,
+      "seconds": 0.1821845829981612,
+      "value": 1.6101131439208984,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 25,
+      "total_updates": 25,
+      "seconds": 0.22277091701107565,
+      "value": 1.6191273927688599,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 30,
+      "total_updates": 30,
+      "seconds": 0.2630717920110328,
+      "value": 1.640518069267273,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 35,
+      "total_updates": 35,
+      "seconds": 0.3030367500032298,
+      "value": 1.6138046979904175,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 40,
+      "total_updates": 40,
+      "seconds": 0.34412470800452866,
+      "value": 1.528358817100525,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 45,
+      "total_updates": 45,
+      "seconds": 0.38397404200804885,
+      "value": 1.480953574180603,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 50,
+      "total_updates": 50,
+      "seconds": 0.4242641669989098,
+      "value": 1.4882386922836304,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 55,
+      "total_updates": 55,
+      "seconds": 0.46425470800022595,
+      "value": 1.4923062324523926,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 60,
+      "total_updates": 60,
+      "seconds": 0.5053796670108568,
+      "value": 1.5395336151123047,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 65,
+      "total_updates": 65,
+      "seconds": 0.5462905000022147,
+      "value": 1.5302854776382446,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 70,
+      "total_updates": 70,
+      "seconds": 0.5871869170077844,
+      "value": 1.526689052581787,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 75,
+      "total_updates": 75,
+      "seconds": 0.628857000003336,
+      "value": 1.50955069065094,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 80,
+      "total_updates": 80,
+      "seconds": 0.6699294170102803,
+      "value": 1.48819100856781,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 85,
+      "total_updates": 85,
+      "seconds": 0.7102318750112318,
+      "value": 1.4733918905258179,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 90,
+      "total_updates": 90,
+      "seconds": 0.7509653750021243,
+      "value": 1.4636619091033936,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 95,
+      "total_updates": 95,
+      "seconds": 0.791462125009275,
+      "value": 1.4623521566390991,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 100,
+      "total_updates": 100,
+      "seconds": 0.8316519580112072,
+      "value": 1.4607601165771484,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 105,
+      "total_updates": 105,
+      "seconds": 0.8714860000036424,
+      "value": 1.4567289352416992,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 110,
+      "total_updates": 110,
+      "seconds": 0.9111731669981964,
+      "value": 1.4511326551437378,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 115,
+      "total_updates": 115,
+      "seconds": 0.9522652919986285,
+      "value": 1.4444353580474854,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 120,
+      "total_updates": 120,
+      "seconds": 0.9929396250081481,
+      "value": 1.4440239667892456,
+      "eligible": true
+    }
+  ],
+  "final_steps": 600,
+  "time_limit_seconds": 30.0
+}

@@ -1,0 +1,31 @@
+{
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "torch": "2.10.0",
+  "threads": 1,
+  "final_steps": 600,
+  "seconds": 30,
+  "sha256": {
+    "experiments/graph_time_to_target.py": "0076c62159c3b8861b14fd8afb85a6ca88c334eb1bf5ad4252250320d3662791",
+    "gnn/graph_local.py": "7baaebb7619680c6b15b69dafede77a6aef8103ed3b83569540fd341e490f8ea",
+    "experiments/local_graph_tasks.py": "b246f029597cfef8f180497caacc16d84261c0939807d8e4fa4189c7f8a3caa1",
+    "results/graph_local_v1/run_BACE_2_11_bp.json": "9f7e3a02d304bc6e91f73e87a2c5f2a6fc56f997ad7c1a279d0900a7113d94cf",
+    "results/graph_local_v1/run_BACE_2_22_bp.json": "b62c8ead00d6d97aca90a61ee6faaec215c1dea5e0b6c33f8606f5b8efc6a123",
+    "results/graph_local_v1/run_BACE_2_33_bp.json": "35c395e4ddbe328ba0aec816ba65dcd6b57e0a0db029f52e08c2c303594166fb",
+    "results/graph_local_v1/run_BACE_4_11_bp.json": "3bd7a01d1aa0da4905230cfa65f3f7dd8434b95a21bf501b73a49f9bf2c1f1ac",
+    "results/graph_local_v1/run_BACE_4_22_bp.json": "fb68c8fe3de3e208247829987d73b09b3a8752e0842c212cf84c96a8329631c1",
+    "results/graph_local_v1/run_BACE_4_33_bp.json": "3182faaf87b60b80e97ba23b57d38694726432df4f46e29fb5bfa2e44669d7f3",
+    "results/graph_local_v1/run_ESOL_2_11_bp.json": "6395ccd2d5b696112833b2915c7d300878d6e8a9a12d86640e45295d39508aa0",
+    "results/graph_local_v1/run_ESOL_2_22_bp.json": "cab3d531059b78ce494f35fb9e323e0589c4d1232d4435ddf997ae12f7405b53",
+    "results/graph_local_v1/run_ESOL_2_33_bp.json": "d41866bc5f5c82d287883e992568d96b297c9c7d1f5591cf60363146a4c4e02d",
+    "results/graph_local_v1/run_ESOL_4_11_bp.json": "9a923639ce53091814cd37aea513e0e923b2da814a89074e1db7e65e42ae7d80",
+    "results/graph_local_v1/run_ESOL_4_22_bp.json": "2a20aee91678ba3128c3010b3e2b9da9f6d0b52c29bcfdb7852c88cf0ae4fc64",
+    "results/graph_local_v1/run_ESOL_4_33_bp.json": "432f0f0fec7a03417d5638e960ff4d550891cd9811b441406165077122dc987b",
+    "results/graph_local_v1/split_BACE_11.json": "dfc4dc451c4a6eed5196cb37ad49f7d8fffa5f8ed9ced7c25cadb69fc9c00f39",
+    "results/graph_local_v1/split_BACE_22.json": "47995a96cb246514b6636510d6d0b28f9727c9c049746fa94cc77f2d461047f8",
+    "results/graph_local_v1/split_BACE_33.json": "a0342a741362172630d51411e14063115b5e42d2404e14f14fff7e374a6ee392",
+    "results/graph_local_v1/split_ESOL_11.json": "c17f821295a9345099fc65d725b71615b40ab8a66e62517517b70bd2c3793fe8",
+    "results/graph_local_v1/split_ESOL_22.json": "971264eb6b3c9ca1bbd8c3021a0de6946fb5a652a97443c3a608a4271c3d2a02",
+    "results/graph_local_v1/split_ESOL_33.json": "4799aeaafb251d454e238d49db3ead93bd965970ccfacf5218760cd672137a3e",
+    "results/graph_local_v1/manifest.json": "82f0de2ae957983e844d82d9b42410bcb793681e0e58070e0949dddd27cd5478"
+  }
+}

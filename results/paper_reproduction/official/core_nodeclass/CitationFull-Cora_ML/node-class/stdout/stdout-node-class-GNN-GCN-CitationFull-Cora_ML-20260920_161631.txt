@@ -1,0 +1,214 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class/stdout/stdout-node-class-GNN-GCN-CitationFull-Cora_ML-20260920_161631.txtstdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class/stdout/stdout-node-class-GNN-GCN-CitationFull-Cora_ML-20260920_161631.txt
+
+args:
+{'cuda': False,
+ 'dataset': 'CitationFull-Cora_ML',
+ 'device': device(type='cpu'),
+ 'epochs': 1000,
+ 'exp_datetime': '20260920_161631',
+ 'exp_setting': 'core_nodeclass',
+ 'gpu': -1,
+ 'lr': 0.001,
+ 'model': 'GNN-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 3,
+ 'num_runs': 5,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class'),
+ 'seed': 100,
+ 'task': 'node-class',
+ 'val_every': 2}args:
+{'cuda': False,
+ 'dataset': 'CitationFull-Cora_ML',
+ 'device': device(type='cpu'),
+ 'epochs': 1000,
+ 'exp_datetime': '20260920_161631',
+ 'exp_setting': 'core_nodeclass',
+ 'gpu': -1,
+ 'lr': 0.001,
+ 'model': 'GNN-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 4,
+ 'num_runs': 5,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class'),
+ 'seed': 100,
+ 'task': 'node-class',
+ 'val_every': 2}
+
+
+Starting run-0 of GNN-GCN on CitationFull-Cora_ML (seed=10100)
+
+Starting run-0 of GNN-GCN on CitationFull-Cora_ML (seed=10100)
+
+
+2026-09-20 16:16:31,458 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+2026-09-20 16:16:31,458 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+
+Dataset (CitationFull-Cora_ML):Dataset (CitationFull-Cora_ML):
+
+================================================================================================================================================================
+
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)- Number of classes: 7
+
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of training nodes: 1916- Number of validation nodes: 480
+
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+- Number of testing nodes: 599================================================================================
+
+================================================================================
+GCN(2879, 7, num_layers=3)
+GCN(2879, 7, num_layers=4)
+[Epoch-361] Early stop!
+2026-09-20 16:17:39,324 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.836394
+
+Starting run-1 of GNN-GCN on CitationFull-Cora_ML (seed=10103)
+
+2026-09-20 16:17:39,430 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=4)
+[Epoch-633] Early stop!
+2026-09-20 16:18:12,389 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.866444
+
+Starting run-1 of GNN-GCN on CitationFull-Cora_ML (seed=10103)
+
+2026-09-20 16:18:12,486 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=3)
+[Epoch-563] Early stop!
+2026-09-20 16:19:49,631 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.899833
+
+Starting run-2 of GNN-GCN on CitationFull-Cora_ML (seed=10106)
+
+2026-09-20 16:19:49,748 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=3)
+[Epoch-775] Early stop!
+2026-09-20 16:20:06,850 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.884808
+
+Starting run-2 of GNN-GCN on CitationFull-Cora_ML (seed=10106)
+
+2026-09-20 16:20:06,938 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=4)
+[Epoch-489] Early stop!
+2026-09-20 16:21:40,430 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.858097
+
+Starting run-3 of GNN-GCN on CitationFull-Cora_ML (seed=10109)
+
+2026-09-20 16:21:40,547 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=4)
+[Epoch-859] Early stop!
+2026-09-20 16:22:06,709 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.881469
+
+Starting run-3 of GNN-GCN on CitationFull-Cora_ML (seed=10109)
+
+2026-09-20 16:22:06,819 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=3)
+[Epoch-443] Early stop!
+2026-09-20 16:23:10,483 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.886477
+
+Starting run-4 of GNN-GCN on CitationFull-Cora_ML (seed=10112)
+
+2026-09-20 16:23:10,598 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=4)
+[Epoch-421] Early stop!
+2026-09-20 16:23:21,556 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.898164
+
+Starting run-4 of GNN-GCN on CitationFull-Cora_ML (seed=10112)
+
+2026-09-20 16:23:21,657 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-Cora_ML/node-5splits
+
+Dataset (CitationFull-Cora_ML):
+================================================================================
+Data(x=[2995, 2879], edge_index=[2, 16316], y=[2995], train_mask=[2995], val_mask=[2995], test_mask=[2995], num_classes=7)
+- Number of classes: 7
+- Number of training nodes: 1916
+- Number of validation nodes: 480
+- Number of testing nodes: 599
+================================================================================
+GCN(2879, 7, num_layers=3)
+[Epoch-569] Early stop!
+2026-09-20 16:25:05,732 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.874791
+
+Test Performance (5 runs): 0.868113%±0.0188
+[Epoch-743] Early stop!
+2026-09-20 16:25:19,624 [INFO] [train_backprop.train] Finished training
+Test Accuracy: 0.886477
+
+Test Performance (5 runs): 0.886477%±0.0122

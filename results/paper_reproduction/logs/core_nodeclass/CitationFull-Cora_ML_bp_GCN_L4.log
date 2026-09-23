@@ -1,0 +1,29 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class/stdout/stdout-node-class-GNN-GCN-CitationFull-Cora_ML-20260920_162640.txt
+args:
+{'cuda': False,
+ 'dataset': 'CitationFull-Cora_ML',
+ 'device': device(type='cpu'),
+ 'epochs': 1000,
+ 'exp_datetime': '20260920_162640',
+ 'exp_setting': 'core_nodeclass',
+ 'gpu': -1,
+ 'lr': 0.001,
+ 'model': 'GNN-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 4,
+ 'num_runs': 5,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/core_nodeclass/CitationFull-Cora_ML/node-class'),
+ 'seed': 100,
+ 'task': 'node-class',
+ 'val_every': 2}
+2026-09-20 16:26:40,270 [INFO] [train_backprop.main] Skipping run-0: already evaluated.
+2026-09-20 16:26:40,271 [INFO] [train_backprop.main] Skipping run-1: already evaluated.
+2026-09-20 16:26:40,271 [INFO] [train_backprop.main] Skipping run-2: already evaluated.
+2026-09-20 16:26:40,271 [INFO] [train_backprop.main] Skipping run-3: already evaluated.
+2026-09-20 16:26:40,271 [INFO] [train_backprop.main] Skipping run-4: already evaluated.
+
+Test Performance (5 runs): 0.868113%±0.0188
+
+COMMAND ["/Users/maybe/miniconda3/envs/gnn-research/bin/python", "-u", "/Users/maybe/GNN/experiments/reproduce_paper.py", "--worker", "bp", "--task", "node-class", "--model", "GNN-GCN", "--dataset", "CitationFull-Cora_ML", "--num-layers", "4", "--num-hidden", "128", "--num-runs", "5", "--seed", "100", "--epochs", "1000", "--lr", "0.001", "--val-every", "2", "--patience", "100", "--gpu", "-1", "--exp-setting", "core_nodeclass"]

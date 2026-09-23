@@ -1,0 +1,139 @@
+{
+  "dataset": "BACE",
+  "depth": 2,
+  "seed": 11,
+  "method": "sf",
+  "task": "classification",
+  "metric": "auc",
+  "target": 0.671907040328093,
+  "reached": true,
+  "hit": {
+    "seconds": 1.0901552499999525,
+    "value": 0.7040328092959672,
+    "step": 5,
+    "total_updates": 65
+  },
+  "observed_seconds": 1.0903094170062104,
+  "updates": 65,
+  "stop_reason": "target",
+  "best_final_validation": 0.7040328092959672,
+  "test": {
+    "auc": 0.5970588235294118,
+    "ap": 0.5084096764220819,
+    "accuracy": 0.35864978902953587
+  },
+  "memory": {
+    "baseline_rss_mib": 529.28125,
+    "sampled_training_peak_rss_mib": 660.875,
+    "sampled_training_increment_mib": 131.59375,
+    "process_lifetime_peak_until_training_end_mib": 660.875
+  },
+  "curve": [
+    {
+      "stage": 1,
+      "step": 5,
+      "total_updates": 5,
+      "seconds": 0.1153660420095548,
+      "value": 0.2840909090909091,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 10,
+      "total_updates": 10,
+      "seconds": 0.20055079201119952,
+      "value": 0.6973684210526316,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 15,
+      "total_updates": 15,
+      "seconds": 0.2854729170067003,
+      "value": 0.38738892686261106,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 20,
+      "total_updates": 20,
+      "seconds": 0.3687827920075506,
+      "value": 0.6919856459330144,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 25,
+      "total_updates": 25,
+      "seconds": 0.45205512500251643,
+      "value": 0.5076042378673958,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 30,
+      "total_updates": 30,
+      "seconds": 0.5350870840047719,
+      "value": 0.6737867395762133,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 35,
+      "total_updates": 35,
+      "seconds": 0.6192894590058131,
+      "value": 0.557758031442242,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 40,
+      "total_updates": 40,
+      "seconds": 0.7038694590009982,
+      "value": 0.6573820915926178,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 45,
+      "total_updates": 45,
+      "seconds": 0.7869133340136614,
+      "value": 0.5760423786739577,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 50,
+      "total_updates": 50,
+      "seconds": 0.8707019590074196,
+      "value": 0.6339712918660287,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 55,
+      "total_updates": 55,
+      "seconds": 0.9546647920069518,
+      "value": 0.5842447026657552,
+      "eligible": false
+    },
+    {
+      "stage": 1,
+      "step": 60,
+      "total_updates": 60,
+      "seconds": 1.0371949170075823,
+      "value": 0.6220095693779905,
+      "eligible": false
+    },
+    {
+      "stage": 2,
+      "step": 5,
+      "total_updates": 65,
+      "seconds": 1.0901552499999525,
+      "value": 0.7040328092959672,
+      "eligible": true
+    }
+  ],
+  "final_steps": 600,
+  "time_limit_seconds": 30.0
+}

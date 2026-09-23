@@ -1,0 +1,419 @@
+{
+  "dataset": "ESOL",
+  "depth": 4,
+  "seed": 22,
+  "method": "bp",
+  "task": "regression",
+  "metric": "rmse",
+  "target": 0.8420694470405579,
+  "reached": true,
+  "hit": {
+    "seconds": 2.6293191670119995,
+    "value": 0.8420694470405579,
+    "step": 240,
+    "total_updates": 240
+  },
+  "observed_seconds": 2.6295506250025937,
+  "updates": 240,
+  "stop_reason": "target",
+  "best_final_validation": 0.8420694470405579,
+  "test": {
+    "rmse": 1.2907642126083374,
+    "mae": 1.0038114786148071,
+    "r2": 0.6529781818389893
+  },
+  "memory": {
+    "baseline_rss_mib": 471.921875,
+    "sampled_training_peak_rss_mib": 525.921875,
+    "sampled_training_increment_mib": 54.0,
+    "process_lifetime_peak_until_training_end_mib": 525.921875
+  },
+  "curve": [
+    {
+      "stage": 1,
+      "step": 5,
+      "total_updates": 5,
+      "seconds": 0.07377437500690576,
+      "value": 1.7507573366165161,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 10,
+      "total_updates": 10,
+      "seconds": 0.12868304199946579,
+      "value": 1.897423267364502,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 15,
+      "total_updates": 15,
+      "seconds": 0.1833132080064388,
+      "value": 1.6773655414581299,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 20,
+      "total_updates": 20,
+      "seconds": 0.23787929200625513,
+      "value": 1.7936242818832397,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 25,
+      "total_updates": 25,
+      "seconds": 0.29180708300555125,
+      "value": 1.6003247499465942,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 30,
+      "total_updates": 30,
+      "seconds": 0.34594937501242384,
+      "value": 1.5427595376968384,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 35,
+      "total_updates": 35,
+      "seconds": 0.40063270801329054,
+      "value": 1.4830876588821411,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 40,
+      "total_updates": 40,
+      "seconds": 0.45487500001036096,
+      "value": 1.461972713470459,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 45,
+      "total_updates": 45,
+      "seconds": 0.5089228750002803,
+      "value": 1.349245548248291,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 50,
+      "total_updates": 50,
+      "seconds": 0.5646177500020713,
+      "value": 1.2121903896331787,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 55,
+      "total_updates": 55,
+      "seconds": 0.6196140420070151,
+      "value": 1.1121474504470825,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 60,
+      "total_updates": 60,
+      "seconds": 0.6747097920015221,
+      "value": 1.0255472660064697,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 65,
+      "total_updates": 65,
+      "seconds": 0.7288578330044402,
+      "value": 0.9635823965072632,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 70,
+      "total_updates": 70,
+      "seconds": 0.7832913330057636,
+      "value": 0.9171168208122253,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 75,
+      "total_updates": 75,
+      "seconds": 0.8381259170128033,
+      "value": 0.879024863243103,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 80,
+      "total_updates": 80,
+      "seconds": 0.8927480420097709,
+      "value": 0.8661876320838928,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 85,
+      "total_updates": 85,
+      "seconds": 0.9470509580132784,
+      "value": 0.8744171261787415,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 90,
+      "total_updates": 90,
+      "seconds": 1.001316833004239,
+      "value": 0.8808577656745911,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 95,
+      "total_updates": 95,
+      "seconds": 1.0551127080107108,
+      "value": 0.8635634779930115,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 100,
+      "total_updates": 100,
+      "seconds": 1.1088700420077657,
+      "value": 0.8597604632377625,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 105,
+      "total_updates": 105,
+      "seconds": 1.1627770000050077,
+      "value": 0.8978514671325684,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 110,
+      "total_updates": 110,
+      "seconds": 1.216707708008471,
+      "value": 0.8539537787437439,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 115,
+      "total_updates": 115,
+      "seconds": 1.2701472920016386,
+      "value": 0.8570858240127563,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 120,
+      "total_updates": 120,
+      "seconds": 1.3229927500069607,
+      "value": 0.8617708683013916,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 125,
+      "total_updates": 125,
+      "seconds": 1.3759831670031417,
+      "value": 0.866351306438446,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 130,
+      "total_updates": 130,
+      "seconds": 1.4288043750129873,
+      "value": 0.8705068826675415,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 135,
+      "total_updates": 135,
+      "seconds": 1.4829236250079703,
+      "value": 0.8750243782997131,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 140,
+      "total_updates": 140,
+      "seconds": 1.5374902080075117,
+      "value": 0.8770108222961426,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 145,
+      "total_updates": 145,
+      "seconds": 1.5917883750080364,
+      "value": 0.8774552345275879,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 150,
+      "total_updates": 150,
+      "seconds": 1.646393667004304,
+      "value": 0.877164363861084,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 155,
+      "total_updates": 155,
+      "seconds": 1.7006445000006352,
+      "value": 0.8780698776245117,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 160,
+      "total_updates": 160,
+      "seconds": 1.7546017920103623,
+      "value": 0.8833397030830383,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 165,
+      "total_updates": 165,
+      "seconds": 1.8091669170098612,
+      "value": 0.8932704329490662,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 170,
+      "total_updates": 170,
+      "seconds": 1.8651465000002645,
+      "value": 0.8901591300964355,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 175,
+      "total_updates": 175,
+      "seconds": 1.9211952080077026,
+      "value": 0.8886458277702332,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 180,
+      "total_updates": 180,
+      "seconds": 1.976335833009216,
+      "value": 0.9065971374511719,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 185,
+      "total_updates": 185,
+      "seconds": 2.0308514580101473,
+      "value": 0.8941007852554321,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 190,
+      "total_updates": 190,
+      "seconds": 2.0852815830003237,
+      "value": 0.8913756608963013,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 195,
+      "total_updates": 195,
+      "seconds": 2.1396077080135,
+      "value": 0.9322918057441711,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 200,
+      "total_updates": 200,
+      "seconds": 2.194476917007705,
+      "value": 0.9532812833786011,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 205,
+      "total_updates": 205,
+      "seconds": 2.249880667004618,
+      "value": 0.8698298931121826,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 210,
+      "total_updates": 210,
+      "seconds": 2.304462500003865,
+      "value": 0.8680354356765747,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 215,
+      "total_updates": 215,
+      "seconds": 2.35969120801019,
+      "value": 0.8923691511154175,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 220,
+      "total_updates": 220,
+      "seconds": 2.413720958007616,
+      "value": 0.8882746696472168,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 225,
+      "total_updates": 225,
+      "seconds": 2.467838374999701,
+      "value": 0.8684757351875305,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 230,
+      "total_updates": 230,
+      "seconds": 2.5221306670136983,
+      "value": 0.8582118153572083,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 235,
+      "total_updates": 235,
+      "seconds": 2.576350041999831,
+      "value": 0.8541624546051025,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 240,
+      "total_updates": 240,
+      "seconds": 2.6293191670119995,
+      "value": 0.8420694470405579,
+      "eligible": true
+    }
+  ],
+  "final_steps": 600,
+  "time_limit_seconds": 30.0
+}

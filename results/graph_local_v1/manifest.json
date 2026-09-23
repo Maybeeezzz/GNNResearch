@@ -1,0 +1,35 @@
+{
+  "config": {
+    "datasets": [
+      "BACE",
+      "ESOL"
+    ],
+    "depths": [
+      2,
+      4
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "hidden": 32,
+    "epochs": 60,
+    "lr": 0.003,
+    "setting": "graph_local_v1"
+  },
+  "source_sha256": {
+    "experiments/local_graph_tasks.py": "b246f029597cfef8f180497caacc16d84261c0939807d8e4fa4189c7f8a3caa1",
+    "gnn/graph_local.py": "7baaebb7619680c6b15b69dafede77a6aef8103ed3b83569540fd341e490f8ea"
+  },
+  "torch": "2.10.0",
+  "pyg": "2.8.0.post1",
+  "rdkit": "2026.03.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "device": "cpu",
+  "threads": 1,
+  "raw_data_sha256": {
+    "data/MoleculeNet/bace/raw/bace.csv": "f3fb9ce90bada3e2bd6148b0df13f8f8145a357bf87df0dd5b391ede974fc737",
+    "data/MoleculeNet/esol/raw/delaney-processed.csv": "8c06a76f0c6487d29ab0f903e6a7a7139f189ab3c1178f159c8be8964602f189"
+  }
+}

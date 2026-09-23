@@ -1,0 +1,51 @@
+{
+  "dataset": "BACE",
+  "depth": 2,
+  "seed": 11,
+  "method": "bp",
+  "task": "classification",
+  "metric": "auc",
+  "target": 0.671907040328093,
+  "reached": true,
+  "hit": {
+    "seconds": 0.3484641249960987,
+    "value": 0.671907040328093,
+    "step": 10,
+    "total_updates": 10
+  },
+  "observed_seconds": 0.3486324590048753,
+  "updates": 10,
+  "stop_reason": "target",
+  "best_final_validation": 0.671907040328093,
+  "test": {
+    "auc": 0.5761609907120743,
+    "ap": 0.4805490516802611,
+    "accuracy": 0.35864978902953587
+  },
+  "memory": {
+    "baseline_rss_mib": 531.1875,
+    "sampled_training_peak_rss_mib": 688.859375,
+    "sampled_training_increment_mib": 157.671875,
+    "process_lifetime_peak_until_training_end_mib": 688.859375
+  },
+  "curve": [
+    {
+      "stage": 1,
+      "step": 5,
+      "total_updates": 5,
+      "seconds": 0.20377045900386292,
+      "value": 0.23530416951469585,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 10,
+      "total_updates": 10,
+      "seconds": 0.3484641249960987,
+      "value": 0.671907040328093,
+      "eligible": true
+    }
+  ],
+  "final_steps": 600,
+  "time_limit_seconds": 30.0
+}

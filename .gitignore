@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+checkpoints/
+data/
+
+# Experiment checkpoints and downloaded third-party datasets/splits are large
+# generated artifacts; keep source code, reports, and tabular results in Git.
+results/**/*.pt
+third_party/forwardgnn/data/
+third_party/forwardgnn-datasplits/datasplits/

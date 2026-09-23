@@ -1,0 +1,77 @@
+stdout being logged to /Users/maybe/GNN/results/paper_reproduction/official/integration_smoke/CitationFull-CiteSeer/node-class/stdout/stdout-node-class-GNN_SingleForward-GCN-CitationFull-CiteSeer-20260920_160219.txt
+args:
+{'alternating_update': False,
+ 'append_label': None,
+ 'aug_edge_direction': 'bidirection',
+ 'cuda': False,
+ 'dataset': 'CitationFull-CiteSeer',
+ 'device': device(type='cpu'),
+ 'epochs': 2,
+ 'exp_datetime': '20260920_160219',
+ 'exp_setting': 'integration_smoke',
+ 'ff_theta': 2.0,
+ 'gpu': -1,
+ 'grad_max_norm': 1.0,
+ 'loss_fn_name': 'forwardforward_loss_fn',
+ 'lr': 0.001,
+ 'model': 'GNN_SingleForward-GCN',
+ 'num_hidden': 128,
+ 'num_layers': 2,
+ 'num_negs': 2,
+ 'num_runs': 1,
+ 'overwrite_result': False,
+ 'patience': 100,
+ 'results_dir': PosixPath('/Users/maybe/GNN/results/paper_reproduction/official/integration_smoke/CitationFull-CiteSeer/node-class'),
+ 'seed': 100,
+ 'storable_time_steps': [2, 3, 4, 5, 6, 7, 8, 9],
+ 'task': 'node-class',
+ 'temperature': 1.0,
+ 'test_time_steps': 10,
+ 'val_every': 2,
+ 'val_from': 0}
+
+Starting run-0 of GNN_SingleForward-GCN on CitationFull-CiteSeer (seed=10100)
+
+2026-09-20 16:02:19,316 [INFO] [dataloader.load_node_classification_data] loaded node split from /Users/maybe/GNN/third_party/forwardgnn/datasplits/CitationFull-CiteSeer/node-5splits
+
+Dataset (CitationFull-CiteSeer):
+================================================================================
+Data(x=[4230, 602], edge_index=[2, 10674], y=[4230], train_mask=[4230], val_mask=[4230], test_mask=[4230], num_classes=6)
+- Number of classes: 6
+- Number of training nodes: 2707
+- Number of validation nodes: 677
+- Number of testing nodes: 846
+================================================================================
+GNNSingleForward(
+  (layers): ModuleList(
+    (0): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(602, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+    (1): GNNSingleForwardLayer(
+      (norm): LayerNormalization()
+      (gnn_layer): GNNConv(
+        (gnn): GCNConv(128, 128)
+        (relu): ReLU()
+      )
+      (criterion): CrossEntropyLoss()
+    )
+  )
+)
+2026-09-20 16:02:19,479 [INFO] [gnn_sf.forward_train] Finished training layer 1 / 2.
+
+[Layer-0] Test Accuracy : 56.74%
+
+2026-09-20 16:02:19,579 [INFO] [gnn_sf.forward_train] Finished training layer 2 / 2.
+
+[Layer-1] Test Accuracy : 62.41%
+
+2026-09-20 16:02:19,608 [INFO] [gnn_sf.forward_train] Finished training the network.
+
+Test Accuracy: 62.4113% (528/846)
+
+Test Performance (1 runs): 62.411348%±0.0000

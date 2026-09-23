@@ -1,0 +1,143 @@
+{
+  "dataset": "Cora",
+  "model": "gcn",
+  "method": "bp",
+  "scope": "output",
+  "seed": 42,
+  "steps": 500,
+  "eval_every": 50,
+  "hidden": 64,
+  "layers": 2,
+  "dropout": 0.0,
+  "learning_rate": 0.01,
+  "total_parameters": 92231,
+  "trainable_parameters": 455,
+  "nodes": 2708,
+  "edges": 10556,
+  "features": 1433,
+  "classes": 7,
+  "optimization_forwards": 500,
+  "backward_passes": 500,
+  "wall_seconds": 3.620339957997203,
+  "milliseconds_per_step": 7.240679915994406,
+  "peak_rss_mb": 404.6875,
+  "incremental_peak_rss_mb": 33.0625,
+  "train_accuracy": 0.1428571492433548,
+  "train_macro_f1": 0.0357142873108387,
+  "val_accuracy": 0.12200000137090683,
+  "val_macro_f1": 0.031122449785470963,
+  "test_accuracy": 0.12999999523162842,
+  "test_macro_f1": 0.03298654779791832,
+  "history": [
+    {
+      "step": 0,
+      "objective": NaN,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.3160000145435333,
+      "val_macro_f1": 0.0686061680316925,
+      "test_accuracy": 0.3190000057220459,
+      "test_macro_f1": 0.06909997016191483
+    },
+    {
+      "step": 50,
+      "objective": 1.9395065307617188,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031066972762346268,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03286978229880333
+    },
+    {
+      "step": 100,
+      "objective": 1.9382156133651733,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03289889544248581
+    },
+    {
+      "step": 150,
+      "objective": 1.9381097555160522,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 200,
+      "objective": 1.9381085634231567,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 250,
+      "objective": 1.9381088018417358,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 300,
+      "objective": 1.9381088018417358,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 350,
+      "objective": 1.938109040260315,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 400,
+      "objective": 1.9381088018417358,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 450,
+      "objective": 1.9381088018417358,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    },
+    {
+      "step": 500,
+      "objective": 1.9381088018417358,
+      "train_accuracy": 0.1428571492433548,
+      "train_macro_f1": 0.0357142873108387,
+      "val_accuracy": 0.12200000137090683,
+      "val_macro_f1": 0.031122449785470963,
+      "test_accuracy": 0.12999999523162842,
+      "test_macro_f1": 0.03298654779791832
+    }
+  ]
+}

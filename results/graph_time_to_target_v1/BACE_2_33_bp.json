@@ -1,0 +1,59 @@
+{
+  "dataset": "BACE",
+  "depth": 2,
+  "seed": 33,
+  "method": "bp",
+  "task": "classification",
+  "metric": "auc",
+  "target": 0.7165568273788878,
+  "reached": true,
+  "hit": {
+    "seconds": 0.4348526250105351,
+    "value": 0.7165568273788878,
+    "step": 15,
+    "total_updates": 15
+  },
+  "observed_seconds": 0.43503912500455044,
+  "updates": 15,
+  "stop_reason": "target",
+  "best_final_validation": 0.7165568273788878,
+  "test": {
+    "auc": 0.6593733474352195,
+    "ap": 0.6276171019224681,
+    "accuracy": 0.5040650406504065
+  },
+  "memory": {
+    "baseline_rss_mib": 528.140625,
+    "sampled_training_peak_rss_mib": 670.84375,
+    "sampled_training_increment_mib": 142.703125,
+    "process_lifetime_peak_until_training_end_mib": 670.84375
+  },
+  "curve": [
+    {
+      "stage": 1,
+      "step": 5,
+      "total_updates": 5,
+      "seconds": 0.1672807080030907,
+      "value": 0.6372412995722049,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 10,
+      "total_updates": 10,
+      "seconds": 0.30388191700330935,
+      "value": 0.29130535322002543,
+      "eligible": true
+    },
+    {
+      "stage": 1,
+      "step": 15,
+      "total_updates": 15,
+      "seconds": 0.4348526250105351,
+      "value": 0.7165568273788878,
+      "eligible": true
+    }
+  ],
+  "final_steps": 600,
+  "time_limit_seconds": 30.0
+}

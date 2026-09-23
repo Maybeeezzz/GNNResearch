@@ -1,0 +1,41 @@
+{
+  "configuration": {
+    "datasets": [
+      "CitationFull-CiteSeer"
+    ],
+    "backbones": [
+      "GCN"
+    ],
+    "max_layers": 2,
+    "runs": 1,
+    "epochs": 2,
+    "setting": "integration_smoke"
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.11.16 (main, Sep  2 2026, 23:33:55) [Clang 21.1.8 ]",
+  "torch": "2.10.0",
+  "pyg": "2.8.0.post1",
+  "device": "cpu",
+  "threads": 1,
+  "upstream_commit": "73fe25720afd0f854e49c099f9c2517c0549617d",
+  "split_commit": "48997da6fc96fd11ee3dfed47e720d942853e729",
+  "split_sha256": {
+    "datasplits/CitationFull-CiteSeer/node-5splits/test-node-index-split0.pt": "62e3fbc346b7c9699972e8b5b98d0a5de248695fe966881c73fac02560912dba",
+    "datasplits/CitationFull-CiteSeer/node-5splits/test-node-index-split1.pt": "49ca782da57cb5a6ab61dea8a04813d15bc6c3647452de7fe90b5b13be309afd",
+    "datasplits/CitationFull-CiteSeer/node-5splits/test-node-index-split2.pt": "98981d7f5c8a95514c63a5a5d81829b600b51c89ed99656a525b637a5fdb11ab",
+    "datasplits/CitationFull-CiteSeer/node-5splits/test-node-index-split3.pt": "dbd70207cca8e80f49118e1b2b3b3e700c5c90d7a96bd1d4bf08e7c06fd8fb72",
+    "datasplits/CitationFull-CiteSeer/node-5splits/test-node-index-split4.pt": "11e7824190e5c9b4f20c77b722b15a1228ac9d7cb0e946dd0a305cb7d5512b1d",
+    "datasplits/CitationFull-CiteSeer/node-5splits/train-node-index-split0.pt": "68040161513133e2ed9299a84f252c79e0a9fea7f6abaf8e1ff26654db41fdb2",
+    "datasplits/CitationFull-CiteSeer/node-5splits/train-node-index-split1.pt": "e7f275deca8578f6568e38d06d48686f296862af5d2233da905e08275c5ddd63",
+    "datasplits/CitationFull-CiteSeer/node-5splits/train-node-index-split2.pt": "3262d57726f8639b1c72e5ea45f7d4c5fcbff959ec8ff086b3f6f729ac3dcf7d",
+    "datasplits/CitationFull-CiteSeer/node-5splits/train-node-index-split3.pt": "dc72df3b1d2a3d8a4cce7c7506fd7fbc4f0927fcdc6ff2460ee980c64e9060b4",
+    "datasplits/CitationFull-CiteSeer/node-5splits/train-node-index-split4.pt": "9e32500e2b32851dab3a79c6cde0ec9ac796eea6578d1f7a1ed8633ec83e8a9f",
+    "datasplits/CitationFull-CiteSeer/node-5splits/val-node-index-split0.pt": "6bd5baf594eff9f4f4382f4e3e0e1b5ce6144a19852b9845619e2307033d3bb0",
+    "datasplits/CitationFull-CiteSeer/node-5splits/val-node-index-split1.pt": "ce6895dae9a5ee964b05efe70470ce9d5376d65f68dc566dd271b26de37ceb5d",
+    "datasplits/CitationFull-CiteSeer/node-5splits/val-node-index-split2.pt": "4772f531a70f92f5b958841a5e1b5a1a8febf9ff97dd0af212969512e4f30db7",
+    "datasplits/CitationFull-CiteSeer/node-5splits/val-node-index-split3.pt": "a693db669c63221ec826ae231fc619b8a4d5ad9a749390c2867926a204f7c446",
+    "datasplits/CitationFull-CiteSeer/node-5splits/val-node-index-split4.pt": "12bca3ca141efdc75f519609e32dbce8412e4ca8dc1d621278242d9fdfe3cfb6"
+  },
+  "compatibility": "Optional import shim for UNUSED legacy cached operators; standard PyG operators unchanged.",
+  "limitations": "Newer PyTorch/PyG and CPU; H100 GPU memory/time not reproduced."
+}

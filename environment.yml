@@ -1,0 +1,23 @@
+name: gnn-research
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.26
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - networkx
+  - pytorch>=2.2
+  - tensorboard>=2.16
+  - jupyterlab
+  - ipykernel
+  - pytest
+  - ruff
+  - psutil
+  - pip:
+      - torch-geometric>=2.6
+      - rdkit>=2023.9
