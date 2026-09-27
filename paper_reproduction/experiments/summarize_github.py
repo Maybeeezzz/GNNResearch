@@ -16,7 +16,7 @@ from paper_reproduction.experiments.plot_memory_comparison import collect_memory
 from paper_reproduction.experiments.summarize_paper import collect
 
 ROOT = Path(__file__).resolve().parents[2]
-RESULTS = ROOT / 'results/paper_reproduction'
+RESULTS = ROOT / 'results/reproduction'
 SETTING = 'github_nodeclass_mps_memory'
 SETTINGS = [SETTING] + [f'{SETTING}_sf_depth{i}' for i in (1, 2, 3)]
 BACKBONES = ('GCN', 'GAT')
@@ -80,7 +80,9 @@ def snapshot():
             if method == 'bp' or depth == config['max_layers']:
                 fits += len(rows)
     completed = complete_groups == 16 and completed_memory == 16
-    state = 'complete' if completed else ('failed' if failures else 'running')
+    prior_progress = output / 'progress.json'
+    was_stopped = prior_progress.exists() and json.loads(prior_progress.read_text()).get('state') == 'stopped'
+    state = 'complete' if completed else ('failed' if failures else ('stopped' if was_stopped else 'running'))
     status = dict(updated_utc=datetime.now(timezone.utc).isoformat(), state=state,
                   saved_independent_fits=fits, expected_independent_fits=80,
                   complete_accuracy_groups=complete_groups, expected_accuracy_groups=16,
@@ -125,7 +127,7 @@ def snapshot():
              '- 本轮复现：GCN / GAT，BP / SF，1～4 层、官方五折、128 维、Adam lr=0.001、weight_decay=0.0005；最多 1000 epoch（SF 为每层），每 2 epoch 验证，patience=100。没有降低正式训练预算。',
              '- 训练及推理仅 MPS，禁用 CPU 算子 fallback。数据准备与指标汇总使用 CPU。两条训练队列并行、每条内部串行；时间不作为性能基准。',
              '- PyG 的 graphmining.ai 下载地址无法解析。改从[作者发布的数据划分](https://github.com/NamyongPark/forwardgnn-datasplits)恢复：五组完整正边集合、节点特征和标签逐项完全一致。37,700 节点、578,006 条有向边、128 维特征、2 类。',
-             '- 保留作者已经归一化的特征，避免二次归一化。边按源/目标编号排序，原始顺序不可恢复，可能影响浮点求和。数据恢复代码、15 个源文件哈希和缓存哈希可审计，见 results/paper_reproduction/github_data_provenance.json。',
+             '- 保留作者已经归一化的特征，避免二次归一化。边按源/目标编号排序，原始顺序不可恢复，可能影响浮点求和。数据恢复代码、15 个源文件哈希和缓存哈希可审计，见 results/reproduction/github_data_provenance.json。',
              '- 不覆盖 FF、top-down、链接预测、GraphSAGE 实测或 H100 运行。', '',
              f'![论文结果]({output / "github_paper_results.png"})', '',
              '## 论文数值', '',

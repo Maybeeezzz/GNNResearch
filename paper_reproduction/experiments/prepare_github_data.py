@@ -15,7 +15,7 @@ from torch_geometric.utils import is_undirected
 
 ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / 'third_party/forwardgnn/data/GitHub/author_recovered.pt'
-PROVENANCE = ROOT / 'results/paper_reproduction/github_data_provenance.json'
+PROVENANCE = ROOT / 'results/reproduction/github_data_provenance.json'
 
 
 def recover():

@@ -11,11 +11,11 @@
       "sf",
       "bp"
     ],
-    "max_layers": 1,
-    "runs": 1,
-    "epochs": 2,
+    "max_layers": 4,
+    "runs": 5,
+    "epochs": 1000,
     "device": "mps",
-    "setting": "github_mps_smoke",
+    "setting": "github_nodeclass_mps_memory",
     "memory_interval": 0.5
   },
   "platform": "macOS-27.0-arm64-arm-64bit",
@@ -27,7 +27,7 @@
   "mps_fallback": false,
   "memory_monitor": {
     "interval_seconds": 0.5,
-    "directory": "/Users/maybe/GNN/results/paper_reproduction/memory/github_mps_smoke",
+    "directory": "/Users/maybe/GNN/results/reproduction/memory/github_nodeclass_mps_memory",
     "peak_kind": "sampled lower bound",
     "scope": "worker process"
   },

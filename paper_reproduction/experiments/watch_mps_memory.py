@@ -4,7 +4,7 @@ import json
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2] / "results/paper_reproduction/memory"
+ROOT = Path(__file__).resolve().parents[2] / "results/reproduction/memory"
 
 
 def latest_sample(path):

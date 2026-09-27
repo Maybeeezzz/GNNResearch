@@ -10,10 +10,10 @@
 - 本轮复现：GCN / GAT，BP / SF，1～4 层、官方五折、128 维、Adam lr=0.001、weight_decay=0.0005；最多 1000 epoch（SF 为每层），每 2 epoch 验证，patience=100。没有降低正式训练预算。
 - 训练及推理仅 MPS，禁用 CPU 算子 fallback。数据准备与指标汇总使用 CPU。两条训练队列并行、每条内部串行；时间不作为性能基准。
 - PyG 的 graphmining.ai 下载地址无法解析。改从[作者发布的数据划分](https://github.com/NamyongPark/forwardgnn-datasplits)恢复：五组完整正边集合、节点特征和标签逐项完全一致。37,700 节点、578,006 条有向边、128 维特征、2 类。
-- 保留作者已经归一化的特征，避免二次归一化。边按源/目标编号排序，原始顺序不可恢复，可能影响浮点求和。数据恢复代码、15 个源文件哈希和缓存哈希可审计，见 results/paper_reproduction/github_data_provenance.json。
+- 保留作者已经归一化的特征，避免二次归一化。边按源/目标编号排序，原始顺序不可恢复，可能影响浮点求和。数据恢复代码、15 个源文件哈希和缓存哈希可审计，见 results/reproduction/github_data_provenance.json。
 - 不覆盖 FF、top-down、链接预测、GraphSAGE 实测或 H100 运行。
 
-![论文结果](/Users/maybe/GNN/results/paper_reproduction/summary/github_nodeclass_mps_memory/github_paper_results.png)
+![论文结果](/Users/maybe/GNN/results/reproduction/summary/github_nodeclass_mps_memory/github_paper_results.png)
 
 ## 论文数值
 
@@ -69,7 +69,7 @@
 
 未完成五折的均值只是中间结果，不能作最终复现结论。用户要求停止训练，报告保留当时已写入的部分结果。SF 主准确率来自四层逐层训练保存的前缀；独立深度补测只用于显存比较。
 
-![MPS 显存](/Users/maybe/GNN/results/paper_reproduction/summary/github_nodeclass_mps_memory/github_mps_memory.png)
+![MPS 显存](/Users/maybe/GNN/results/reproduction/summary/github_nodeclass_mps_memory/github_mps_memory.png)
 
 ## 显存比较
 

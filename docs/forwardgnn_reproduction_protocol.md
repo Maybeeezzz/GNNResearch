@@ -8,7 +8,7 @@
 - `paper_reproduction/experiments/summarize_paper.py`：统一准确率单位，检查五折完整性，计算总体标准差。
 - `third_party/forwardgnn`：官方代码，保留原许可证。
 - `third_party/forwardgnn-datasplits`：作者发布的原始划分，保留原来源。
-- `results/paper_reproduction`：配置、文件哈希、逐折原始 JSON 和完整日志。
+- `results/reproduction`：配置、文件哈希、逐折原始 JSON 和完整日志。
 
 ## 执行
 
@@ -60,7 +60,7 @@ conda run -n gnn-research python -m paper_reproduction.experiments.summarize_pap
 `--memory-interval 0.5` 控制采样间隔，单位秒。第二条命令每两秒显示已记录进程的
 当前用量和采样峰值，Ctrl-C 只退出查看，不会停止训练。
 
-数据写入 `results/paper_reproduction/memory/<setting>/`。每次 worker 执行创建独立
+数据写入 `results/reproduction/memory/<setting>/`。每次 worker 执行创建独立
 时间戳 JSONL，逐条刷新，可在训练过程中读取；结束或 Python 异常时另存
 `.summary.json`，记录 completed/failed。强制终止可能没有汇总，此时查看器只显示
 最后采样的时间，不把陈旧记录当作仍在运行。续跑不覆盖既有采样；跳过的训练
@@ -87,4 +87,4 @@ conda run -n gnn-research python -m paper_reproduction.experiments.plot_memory_c
 ```
 
 生成的 PNG、SVG、CSV 与中文比较报告位于
-`results/paper_reproduction/summary/core_nodeclass_mps_memory/memory_comparison/`。
+`results/reproduction/summary/core_nodeclass_mps_memory/memory_comparison/`。

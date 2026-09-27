@@ -20,7 +20,7 @@ import time
 ROOT = Path(__file__).resolve().parents[2]
 UPSTREAM = ROOT / "third_party/forwardgnn"
 SOURCE = UPSTREAM / "src"
-RESULTS = ROOT / "results/paper_reproduction"
+RESULTS = ROOT / "results/reproduction"
 
 
 def worker():

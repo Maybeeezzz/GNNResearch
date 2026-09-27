@@ -26,7 +26,7 @@
   "mps_fallback": false,
   "memory_monitor": {
     "interval_seconds": 0.5,
-    "directory": "/Users/maybe/GNN/results/paper_reproduction/memory/core_nodeclass_mps_memory_sf_depth1",
+    "directory": "/Users/maybe/GNN/results/reproduction/memory/core_nodeclass_mps_memory_sf_depth1",
     "peak_kind": "sampled lower bound",
     "scope": "worker process"
   },

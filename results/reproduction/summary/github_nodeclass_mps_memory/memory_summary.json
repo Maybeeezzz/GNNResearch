@@ -9,7 +9,7 @@
     "driver_mib": 2047.140625,
     "timestamp": "20260927T073423468864Z",
     "pid": "51435",
-    "source": "/Users/maybe/GNN/results/paper_reproduction/memory/github_nodeclass_mps_memory_sf_depth1/GitHub_GNN_SingleForward-GCN_1_20260927T073423468864Z_51435.jsonl",
+    "source": "/Users/maybe/GNN/results/reproduction/memory/github_nodeclass_mps_memory_sf_depth1/GitHub_GNN_SingleForward-GCN_1_20260927T073423468864Z_51435.jsonl",
     "note": "Stopped by user before the five-fold worker completed; the saved samples are partial."
   },
   {
@@ -22,7 +22,7 @@
     "driver_mib": 2055.140625,
     "timestamp": "20260927T073417559147Z",
     "pid": "51396",
-    "source": "/Users/maybe/GNN/results/paper_reproduction/memory/github_nodeclass_mps_memory/GitHub_GNN_SingleForward-GCN_4_20260927T073417559147Z_51396.jsonl",
+    "source": "/Users/maybe/GNN/results/reproduction/memory/github_nodeclass_mps_memory/GitHub_GNN_SingleForward-GCN_4_20260927T073417559147Z_51396.jsonl",
     "note": "Stopped by user before the five-fold worker completed; the saved samples are partial."
   }
 ]

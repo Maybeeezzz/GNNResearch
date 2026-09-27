@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[2]
 REFERENCE = ROOT / 'paper_reproduction/reference'
-OUTPUT = ROOT / 'results/paper_reproduction/published/appendix_e'
+OUTPUT = ROOT / 'results/original_paper/appendix_e'
 SOURCE = 'https://arxiv.org/html/2403.11004v1'
 DATASETS = ('Amazon', 'GitHub', 'CiteSeer', 'PubMed', 'CoraML')
 BACKBONES = ('GCN', 'SAGE', 'GAT')

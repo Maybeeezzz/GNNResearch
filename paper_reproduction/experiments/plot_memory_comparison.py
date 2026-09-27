@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from paper_reproduction.experiments.watch_mps_memory import latest_sample
 
 ROOT = Path(__file__).resolve().parents[2]
-RESULTS = ROOT / "results/paper_reproduction"
+RESULTS = ROOT / "results/reproduction"
 COLORS = {"bp": "#2463a6", "sf": "#df7635"}
 LABELS = {"CitationFull-CiteSeer": "CiteSeer", "CitationFull-Cora_ML": "CoraML"}
 

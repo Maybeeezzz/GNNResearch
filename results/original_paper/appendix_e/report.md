@@ -67,7 +67,7 @@
 
 ## 可追溯数据与重绘
 
-[全部表格 JSON](../../../../paper_reproduction/reference/appendix_e_tables.json) · [SF/BP 数值 JSON](../../../../paper_reproduction/reference/appendix_e_sf_bp.json) · [逐配置差值](paired_comparisons.json)
+[全部表格 JSON](../../../paper_reproduction/reference/appendix_e_tables.json) · [SF/BP 数值 JSON](../../../paper_reproduction/reference/appendix_e_sf_bp.json) · [逐配置差值](paired_comparisons.json)
 
 源码 HTML 固定在 `paper_reproduction/reference/source/forwardgnn_2403.11004v1.html`；JSON 含来源锚点及 SHA256。已与先前独立整理的 GitHub 全部准确率/标准差/显存值交叉核验。
 

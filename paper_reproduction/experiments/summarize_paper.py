@@ -7,7 +7,7 @@ from pathlib import Path
 import statistics
 
 ROOT = Path(__file__).resolve().parents[2]
-RESULTS = ROOT / "results/paper_reproduction"
+RESULTS = ROOT / "results/reproduction"
 # Published GCN node-classification anchors (percent), Tables 4 and 5.
 PAPER = {
     ("CitationFull-CiteSeer", "bp", 1): (84.28, 3.0),
@@ -124,7 +124,7 @@ def main():
              f"- 代码适配：{manifest.get('compatibility', '使用官方训练代码；未修改标准 GCN/SAGE/GAT 算法。')}",
              f"- 代码提交：`{manifest['upstream_commit']}`；划分提交：`{manifest['split_commit']}`。",
              f"- 环境：{manifest['platform']}，PyTorch {manifest['torch']}，PyG {manifest['pyg']}，训练设备 `{manifest.get('device', 'unknown')}`；每进程 CPU 线程数为 1。",
-             "- 原始 JSON 与日志位于 `results/paper_reproduction/official/` 和 `logs/`；manifest 包含划分文件 SHA256。",
+             "- 原始 JSON 与日志位于 `results/reproduction/official/` 和 `logs/`；manifest 包含划分文件 SHA256。",
              "- 每个 SF 四层训练过程保存 1～4 层前缀的结果。这些前缀不是独立初始化的四次训练，遵循官方脚本。",
              "", "## 准确率与论文锚点", "",
              "所有准确率均为百分数。标准差使用总体标准差 ddof=0，与官方汇总代码一致；不是置信区间。未完成五折的行不能当作最终结果。", "",
@@ -161,7 +161,7 @@ def main():
     if "github_data_provenance" in manifest:
         lines += ["", "## GitHub 数据恢复说明", "",
                   "默认数据下载域名不可用；使用作者发布的五组 edge splits 恢复完整图。五组恢复结果的特征、节点标签和正边集合完全相同，且原始节点划分完整覆盖 37,700 个节点。保留作者已归一化的特征，不进行二次归一化。",
-                  "原始边顺序不可恢复，使用按源/目标编号排序的等价边集合；这可能影响浮点聚合顺序。数据来源及 SHA256 记录于 results/paper_reproduction/github_data_provenance.json。"]
+                  "原始边顺序不可恢复，使用按源/目标编号排序的等价边集合；这可能影响浮点聚合顺序。数据来源及 SHA256 记录于 results/reproduction/github_data_provenance.json。"]
     report_name = f"forwardgnn_reproduction_results_{args.setting}.md"
     report = ROOT / "docs" / report_name
     report.write_text("\n".join(lines) + "\n")

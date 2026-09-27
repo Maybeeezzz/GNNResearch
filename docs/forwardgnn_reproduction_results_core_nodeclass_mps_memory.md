@@ -14,7 +14,7 @@
 - 代码适配：MPS device selection in train_utils.py and optional import shim for UNUSED legacy cached operators; standard PyG operators unchanged.
 - 代码提交：`73fe25720afd0f854e49c099f9c2517c0549617d`；划分提交：`48997da6fc96fd11ee3dfed47e720d942853e729`。
 - 环境：macOS-27.0-arm64-arm-64bit，PyTorch 2.10.0，PyG 2.8.0.post1，训练设备 `mps`；每进程 CPU 线程数为 1。
-- 原始 JSON 与日志位于 `results/paper_reproduction/official/` 和 `logs/`；manifest 包含划分文件 SHA256。
+- 原始 JSON 与日志位于 `results/reproduction/official/` 和 `logs/`；manifest 包含划分文件 SHA256。
 - 每个 SF 四层训练过程保存 1～4 层前缀的结果。这些前缀不是独立初始化的四次训练，遵循官方脚本。
 
 ## 准确率与论文锚点
@@ -52,7 +52,7 @@
 本次与论文对应的 16 项配置中，平均测试准确率的最大绝对差为 0.302 个百分点。
 
 
-![深度与准确率](/Users/maybe/GNN/results/paper_reproduction/summary/core_nodeclass_mps_memory/accuracy_vs_depth.png)
+![深度与准确率](/Users/maybe/GNN/results/reproduction/summary/core_nodeclass_mps_memory/accuracy_vs_depth.png)
 
 在本次完成的相同深度对照中：
 

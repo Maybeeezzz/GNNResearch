@@ -28,7 +28,7 @@ def parse_args():
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--device", choices=("mps",), default="mps")
     parser.add_argument("--data-root", type=Path, default=ROOT / "data/Planetoid")
-    parser.add_argument("--output", type=Path, default=ROOT / "results/sf_vn_ablation_mps")
+    parser.add_argument("--output", type=Path, default=ROOT / "results/own_experiments/sf_vn_ablation_mps")
     return parser.parse_args()
 
 

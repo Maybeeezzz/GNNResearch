@@ -1,6 +1,6 @@
 # GitHub 数据集复现
 
-论文数据已经整理；正式 MPS 训练于 2026-09-27 启动。完成状态以[自动更新报告](../results/paper_reproduction/summary/github_nodeclass_mps_memory/report.md)和其中的进度计数为准，不能将启动或短训练通过等同于五折复现完成。
+论文数据已经整理；正式 MPS 训练于 2026-09-27 启动。完成状态以[自动更新报告](../results/reproduction/summary/github_nodeclass_mps_memory/report.md)和其中的进度计数为准，不能将启动或短训练通过等同于五折复现完成。
 
 ## 实验配置
 
@@ -16,7 +16,7 @@ PyG 原始 GitHub 下载地址无法解析，因此从[作者发布的完整边�
 
 恢复后为 37,700 节点、578,006 条有向边、2 类，所有官方节点划分恰好覆盖全部节点。原始边顺序无法恢复，按源/目标编号排序可能造成浮点求和差异。
 
-数据恢复实现见 `paper_reproduction/experiments/prepare_github_data.py`。15 个边划分源文件及缓存的 SHA256 见[数据来源记录](../results/paper_reproduction/github_data_provenance.json)；节点划分哈希和环境见各运行 manifest。每次启动工作进程校验恢复缓存哈希。
+数据恢复实现见 `paper_reproduction/experiments/prepare_github_data.py`。15 个边划分源文件及缓存的 SHA256 见[数据来源记录](../results/reproduction/github_data_provenance.json)；节点划分哈希和环境见各运行 manifest。每次启动工作进程校验恢复缓存哈希。
 
 ## 运行与监控
 
@@ -46,9 +46,9 @@ conda run --no-capture-output -n gnn-research python -m paper_reproduction.exper
 
 ## 产物
 
-- [论文准确率与显存图](../results/paper_reproduction/summary/github_nodeclass_mps_memory/github_paper_results.png)
-- [当前 MPS 显存图](../results/paper_reproduction/summary/github_nodeclass_mps_memory/github_mps_memory.png)
-- [完整对比报告](../results/paper_reproduction/summary/github_nodeclass_mps_memory/report.md)
-- [机器可读进度](../results/paper_reproduction/summary/github_nodeclass_mps_memory/progress.json)
+- [论文准确率与显存图](../results/reproduction/summary/github_nodeclass_mps_memory/github_paper_results.png)
+- [当前 MPS 显存图](../results/reproduction/summary/github_nodeclass_mps_memory/github_mps_memory.png)
+- [完整对比报告](../results/reproduction/summary/github_nodeclass_mps_memory/report.md)
+- [机器可读进度](../results/reproduction/summary/github_nodeclass_mps_memory/progress.json)
 
-同目录提供 SVG 和显存 JSON。逐折准确率、训练日志、原始显存采样分别位于 `results/paper_reproduction/official/`、`logs/`、`memory/` 下对应 setting 目录。
+同目录提供 SVG 和显存 JSON。逐折准确率、训练日志、原始显存采样分别位于 `results/reproduction/official/`、`logs/`、`memory/` 下对应 setting 目录。
