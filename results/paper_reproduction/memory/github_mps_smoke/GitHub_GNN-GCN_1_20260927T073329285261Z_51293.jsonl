@@ -1,0 +1,2 @@
+{"time_unix": 1790494409.2860749, "elapsed_seconds": 0.0006717920186929405, "pid": 51293, "device": "mps", "tensor_bytes": 0, "driver_bytes": 475136, "recommended_max_bytes": 12713115648, "sampled_peak_tensor_bytes": 0, "sampled_peak_driver_bytes": 475136}
+{"time_unix": 1790494409.723789, "elapsed_seconds": 0.4383875000057742, "pid": 51293, "device": "mps", "tensor_bytes": 0, "driver_bytes": 1135935488, "recommended_max_bytes": 12713115648, "sampled_peak_tensor_bytes": 0, "sampled_peak_driver_bytes": 1135935488}

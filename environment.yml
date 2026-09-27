@@ -9,6 +9,7 @@ dependencies:
   - pandas
   - scikit-learn
   - matplotlib
+  - beautifulsoup4
   - seaborn
   - networkx
   - pytorch>=2.2
@@ -20,4 +21,3 @@ dependencies:
   - psutil
   - pip:
       - torch-geometric>=2.6
-      - rdkit>=2023.9

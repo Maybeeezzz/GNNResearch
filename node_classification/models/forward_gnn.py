@@ -54,7 +54,7 @@ class ForwardGNN(nn.Module):
 
     def __init__(self, in_features: int, hidden_features: int, num_classes: int,
                  num_layers: int = 2, temperature: float = 1.0,
-                 edge_direction: str = "bidirection"):
+                 edge_direction: str = "bidirection", use_virtual_nodes: bool = True):
         super().__init__()
         if min(in_features, hidden_features, num_classes, num_layers) < 1:
             raise ValueError("feature sizes, classes and num_layers must be positive")
@@ -66,6 +66,7 @@ class ForwardGNN(nn.Module):
         self.num_layers = num_layers
         self.temperature = temperature
         self.edge_direction = edge_direction
+        self.use_virtual_nodes = use_virtual_nodes
         self.layers = nn.ModuleList(
             SingleForwardLayer(in_features if i == 0 else hidden_features, hidden_features)
             for i in range(num_layers)
@@ -98,6 +99,8 @@ class ForwardGNN(nn.Module):
     def augment(self, x: Tensor, edge_index: Tensor) -> tuple[Tensor, Tensor]:
         if x.size(0) != int(self.graph_nodes) or not self.train_indices.numel():
             raise ValueError("call bind_graph with this transductive graph first")
+        if not self.use_virtual_nodes:
+            return x, edge_index
         virtual_ids = self.train_labels + x.size(0)
         extra = torch.stack((self.train_indices, virtual_ids))
         if self.edge_direction == "bidirection":
@@ -105,12 +108,31 @@ class ForwardGNN(nn.Module):
         return torch.cat((x, self.virtual_features)), torch.cat((edge_index, extra), dim=1)
 
     def class_logits(self, embeddings: Tensor) -> Tensor:
+        if not self.use_virtual_nodes:
+            train_one_hot = F.one_hot(self.train_labels, self.num_classes).to(embeddings.dtype)
+            counts = train_one_hot.sum(dim=0).clamp_min(1)
+            prototypes = train_one_hot.T @ embeddings[self.train_indices] / counts[:, None]
+            return embeddings @ prototypes.T / self.temperature
         real = embeddings[:-self.num_classes]
         representatives = embeddings[-self.num_classes:]
         return real @ representatives.T / self.temperature
 
     def local_loss(self, layer_index: int, inputs: Tensor, edges: Tensor) -> Tensor:
         embeddings = self.layers[layer_index](inputs.detach(), edges)
+        if not self.use_virtual_nodes:
+            # Use leave-one-out class prototypes for labeled queries, preventing
+            # a training node from matching itself as its positive prototype.
+            train_embeddings = embeddings[self.train_indices]
+            assignments = F.one_hot(self.train_labels, self.num_classes).to(embeddings.dtype)
+            sums = assignments.T @ train_embeddings
+            counts = assignments.sum(dim=0)
+            logits = train_embeddings @ (sums / counts.clamp_min(1)[:, None]).T
+            own = torch.arange(self.train_labels.numel(), device=embeddings.device)
+            own_class = self.train_labels
+            own_vectors = train_embeddings
+            leave_one_out = (sums[own_class] - own_vectors) / (counts[own_class] - 1).clamp_min(1)[:, None]
+            logits[own, own_class] = (own_vectors * leave_one_out).sum(dim=1)
+            return F.cross_entropy(logits / self.temperature, self.train_labels)
         return F.cross_entropy(self.class_logits(embeddings)[self.train_indices], self.train_labels)
 
     def forward(self, x: Tensor, edge_index: Tensor) -> Tensor:

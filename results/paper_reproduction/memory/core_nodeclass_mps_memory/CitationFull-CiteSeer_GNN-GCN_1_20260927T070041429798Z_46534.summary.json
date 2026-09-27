@@ -1,0 +1,13 @@
+{
+  "device": "mps",
+  "pid": 46534,
+  "samples": 83,
+  "interval_seconds": 0.5,
+  "sampled_peak_tensor_bytes": 13272320,
+  "sampled_peak_driver_bytes": 63225856,
+  "recommended_max_bytes": 12713115648,
+  "status": "completed",
+  "error": null,
+  "scope": "worker process, all folds and SF prefix layers; includes loading/evaluation",
+  "peak_kind": "sampled lower bound; brief peaks may be missed"
+}

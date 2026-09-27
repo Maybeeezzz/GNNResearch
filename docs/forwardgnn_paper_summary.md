@@ -1,6 +1,6 @@
 # Forward Learning of Graph Neural Networks：原论文结果总结
 
-本文仅总结原论文的方法、实验设置、报告结果及结论，不包含本机复现结果。实际复现另见 [复现结果报告](forwardgnn_reproduction_results.md)。
+本文仅总结原论文的方法、实验设置、报告结果及结论，不包含本机复现结果。实际复现另见 [复现结果报告](forwardgnn_reproduction_results_core_nodeclass_mps_memory.md)。
 
 论文：Park 等，ICLR 2024，[arXiv:2403.11004](https://arxiv.org/abs/2403.11004)。
 数值核对版本：arXiv v1 的正文、附录 B、附录 E；不将本项目此前实验当作论文结果。

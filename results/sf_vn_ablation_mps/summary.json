@@ -1,0 +1,82 @@
+[
+  {
+    "dataset": "Cora",
+    "layers": 2,
+    "variant": "sf_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.7784000039100647,
+    "test_accuracy_std_ddof0": 0.004127942505047576,
+    "validation_accuracy_mean": 0.7723999977111816,
+    "wall_seconds_mean": 5.750419608398806
+  },
+  {
+    "dataset": "Cora",
+    "layers": 2,
+    "variant": "sf_prototype_no_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.8046000123023986,
+    "test_accuracy_std_ddof0": 0.0057480520979577105,
+    "validation_accuracy_mean": 0.7991999983787537,
+    "wall_seconds_mean": 5.434749208000722
+  },
+  {
+    "dataset": "Cora",
+    "layers": 4,
+    "variant": "sf_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.7934000015258789,
+    "test_accuracy_std_ddof0": 0.007282866267322041,
+    "validation_accuracy_mean": 0.7840000033378601,
+    "wall_seconds_mean": 9.41796386661008
+  },
+  {
+    "dataset": "Cora",
+    "layers": 4,
+    "variant": "sf_prototype_no_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.8075999975204468,
+    "test_accuracy_std_ddof0": 0.004715929894934874,
+    "validation_accuracy_mean": 0.8083999991416931,
+    "wall_seconds_mean": 10.188950466609095
+  },
+  {
+    "dataset": "CiteSeer",
+    "layers": 2,
+    "variant": "sf_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.675000011920929,
+    "test_accuracy_std_ddof0": 0.0045166279138178144,
+    "validation_accuracy_mean": 0.6927999973297119,
+    "wall_seconds_mean": 6.969370383000933
+  },
+  {
+    "dataset": "CiteSeer",
+    "layers": 2,
+    "variant": "sf_prototype_no_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.6879999995231628,
+    "test_accuracy_std_ddof0": 0.001673319882207617,
+    "validation_accuracy_mean": 0.6899999976158142,
+    "wall_seconds_mean": 6.887545541598229
+  },
+  {
+    "dataset": "CiteSeer",
+    "layers": 4,
+    "variant": "sf_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.6722000002861023,
+    "test_accuracy_std_ddof0": 0.002993310470057946,
+    "validation_accuracy_mean": 0.6835999965667725,
+    "wall_seconds_mean": 10.692531308403705
+  },
+  {
+    "dataset": "CiteSeer",
+    "layers": 4,
+    "variant": "sf_prototype_no_vn",
+    "n_initializations": 5,
+    "test_accuracy_mean": 0.6883999943733216,
+    "test_accuracy_std_ddof0": 0.0032618877962241628,
+    "validation_accuracy_mean": 0.6891999959945678,
+    "wall_seconds_mean": 11.004315058595967
+  }
+]

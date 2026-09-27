@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-09-27T08:07:42.948207+00:00",
+  "state": "stopped",
+  "saved_independent_fits": 3,
+  "expected_independent_fits": 80,
+  "complete_accuracy_groups": 0,
+  "expected_accuracy_groups": 16,
+  "completed_memory_configurations": 0,
+  "expected_memory_configurations": 16,
+  "failures": [],
+  "stop_reason": "User requested stop"
+}

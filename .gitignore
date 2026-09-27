@@ -8,5 +8,9 @@ data/
 # Experiment checkpoints and downloaded third-party datasets/splits are large
 # generated artifacts; keep source code, reports, and tabular results in Git.
 results/**/*.pt
+results/paper_reproduction/logs/
+results/paper_reproduction/official/**/stdout/
+results/paper_reproduction/locks/
+results/**/*.lock
 third_party/forwardgnn/data/
 third_party/forwardgnn-datasplits/datasplits/

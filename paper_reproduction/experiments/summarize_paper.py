@@ -46,7 +46,7 @@ def collect(setting):
     return groups
 
 
-def plot_results(summaries, output):
+def plot_results(summaries, output, device):
     os.environ.setdefault("MPLCONFIGDIR", "/tmp/gnn-paper-matplotlib")
     import matplotlib
     matplotlib.use("Agg")
@@ -69,7 +69,7 @@ def plot_results(summaries, output):
         axis.set_xticks(sorted({r['depth'] for r in summaries}))
         axis.grid(alpha=0.2)
         axis.legend(fontsize=8)
-    fig.suptitle("Official-code reproduction: five author splits, CPU")
+    fig.suptitle(f"Official-code reproduction: five author splits, {device.upper()}")
     fig.tight_layout()
     fig.savefig(output, dpi=180)
     plt.close(fig)
@@ -77,7 +77,7 @@ def plot_results(summaries, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--setting", default="core_nodeclass")
+    parser.add_argument("--setting", default="core_nodeclass_mps_memory")
     args = parser.parse_args()
     manifest = json.loads((RESULTS / f"manifest_{args.setting}.json").read_text())
     config = manifest["configuration"]
@@ -86,7 +86,7 @@ def main():
     for dataset in config["datasets"]:
         for backbone in config["backbones"]:
             for depth in range(1, config["max_layers"] + 1):
-                for method in ("bp", "sf"):
+                for method in config.get("methods", ["bp", "sf"]):
                     rows = groups.get((dataset, backbone, method, depth), [])
                     ids = [r["run_i"] for r in rows]
                     if len(ids) != len(set(ids)):
@@ -94,6 +94,10 @@ def main():
                     complete = set(ids) == set(range(config["runs"]))
                     values = [r["accuracy_percent"] for r in rows]
                     anchor = PAPER.get((dataset, method, depth)) if backbone == "GCN" else None
+                    if dataset == "GitHub":
+                        references = json.loads((ROOT / "paper_reproduction/reference/github_paper_results.json").read_text())["rows"]
+                        reference = next(r for r in references if r["backbone"] == backbone and r["method"] == method and r["layers"] == depth)
+                        anchor = (reference["accuracy_percent"], reference["std_percent"])
                     mean = statistics.mean(values) if values else None
                     summaries.append({
                         "dataset": dataset, "backbone": backbone, "method": method,
@@ -117,9 +121,9 @@ def main():
              f"- 数据：{', '.join(config['datasets'])}；骨干：{', '.join(config['backbones'])}；深度 1～{config['max_layers']}。",
              f"- 每个配置 {config['runs']} 个作者原始划分；隐藏维度 128，Adam lr=0.001、weight_decay=0.0005。",
              f"- 最多 {config['epochs']} epoch，SF 为每层预算；每 2 epoch 验证，100 次验证未提升则早停，恢复最佳验证准确率权重。",
-             "- 使用官方训练代码；只增加未使用的 legacy cached 算子的可选导入适配，标准 GCN/SAGE/GAT 保持官方调用。",
+             f"- 代码适配：{manifest.get('compatibility', '使用官方训练代码；未修改标准 GCN/SAGE/GAT 算法。')}",
              f"- 代码提交：`{manifest['upstream_commit']}`；划分提交：`{manifest['split_commit']}`。",
-             f"- 环境：{manifest['platform']}，PyTorch {manifest['torch']}，PyG {manifest['pyg']}，每个训练进程 CPU 单线程；部分独立配置并行执行。",
+             f"- 环境：{manifest['platform']}，PyTorch {manifest['torch']}，PyG {manifest['pyg']}，训练设备 `{manifest.get('device', 'unknown')}`；每进程 CPU 线程数为 1。",
              "- 原始 JSON 与日志位于 `results/paper_reproduction/official/` 和 `logs/`；manifest 包含划分文件 SHA256。",
              "- 每个 SF 四层训练过程保存 1～4 层前缀的结果。这些前缀不是独立初始化的四次训练，遵循官方脚本。",
              "", "## 准确率与论文锚点", "",
@@ -131,10 +135,10 @@ def main():
         paper = f"{row['paper_mean_percent']:.2f} ± {row['paper_std_percent']:.1f}" if row['paper_mean_percent'] is not None else "未摘录"
         delta = f"{row['delta_percentage_points']:+.2f}" if row['delta_percentage_points'] is not None else "—"
         lines.append(f"| {row['dataset']} | {row['backbone']} | {row['method']} | {row['depth']} | {row['n']}/{config['runs']} | {local} | {paper} | {delta} |")
-    lines += ["", "论文锚点来源：[附录 E 的 Tables 4、5](https://arxiv.org/html/2403.11004v1#A5.SS1)。差值仅描述数值接近程度，不是显著性检验。", "",
+    lines += ["", "论文锚点来源：[附录 E 的 Tables 3–5](https://arxiv.org/html/2403.11004v1#A5.SS1)。差值仅描述数值接近程度，不是显著性检验。", "",
               "## 结论与未覆盖项", "",
               "本报告仅验证上述核心节点分类矩阵，不宣称复现完整论文。尚未覆盖其他数据/骨干组合、FF 对照、top-down 扩展、链接预测及 H100 显存结果。",
-              "CPU 没有提供论文 GPU 显存指标。日志时间保留供审计，但 SF 含逐层验证/测试等额外开销，BP 的计时范围不同，不以两者原始时间比宣称优化器加速。软件版本也与论文不同。", ""]
+              f"本机 `{manifest.get('device', 'unknown')}` 运行不等同于论文 H100 运行，不能据此复现论文 GPU 显存指标。日志时间保留供审计，但 SF 含逐层验证/测试等额外开销，BP 的计时范围不同，不以两者原始时间比宣称优化器加速。软件版本也与论文不同。", ""]
     lines += ["论文使用 PyTorch 1.13.1 / PyG 2.2.0 / H100，本机环境不同；本次使用官方准确率脚本的标准算子，未复现 Table 15 的缓存邻域聚合加速实验。", ""]
     if all(r['complete'] for r in summaries):
         gaps = [abs(r['delta_percentage_points']) for r in summaries if r['delta_percentage_points'] is not None]
@@ -142,17 +146,24 @@ def main():
             lines += [f"本次与论文对应的 {len(gaps)} 项配置中，平均测试准确率的最大绝对差为 {max(gaps):.3f} 个百分点。", ""]
         if config['runs'] == 5:
             plot = output / "accuracy_vs_depth.png"
-            plot_results(summaries, plot)
+            plot_results(summaries, plot, manifest.get("device", "unknown"))
             lines += ["", f"![深度与准确率]({plot})", ""]
         lines += ["在本次完成的相同深度对照中：", ""]
         for row in summaries:
             if row['method'] != 'sf':
                 continue
-            baseline = next(r for r in summaries if r['dataset'] == row['dataset'] and r['backbone'] == row['backbone'] and r['depth'] == row['depth'] and r['method'] == 'bp')
+            baseline = next((r for r in summaries if r['dataset'] == row['dataset'] and r['backbone'] == row['backbone'] and r['depth'] == row['depth'] and r['method'] == 'bp'), None)
+            if baseline is None:
+                continue
             difference = row['mean_percent'] - baseline['mean_percent']
             lines.append(f"- {row['dataset']} / {row['backbone']} / {row['depth']} 层：SF − BP = {difference:+.2f} 个百分点。")
         lines += ["", "结论仅限这些配置；应结合上表逐项判断与论文是否一致。"]
-    report = ROOT / "docs/forwardgnn_reproduction_results.md"
+    if "github_data_provenance" in manifest:
+        lines += ["", "## GitHub 数据恢复说明", "",
+                  "默认数据下载域名不可用；使用作者发布的五组 edge splits 恢复完整图。五组恢复结果的特征、节点标签和正边集合完全相同，且原始节点划分完整覆盖 37,700 个节点。保留作者已归一化的特征，不进行二次归一化。",
+                  "原始边顺序不可恢复，使用按源/目标编号排序的等价边集合；这可能影响浮点聚合顺序。数据来源及 SHA256 记录于 results/paper_reproduction/github_data_provenance.json。"]
+    report_name = f"forwardgnn_reproduction_results_{args.setting}.md"
+    report = ROOT / "docs" / report_name
     report.write_text("\n".join(lines) + "\n")
     print(f"records={sum(r['n'] for r in summaries)} complete_groups={sum(r['complete'] for r in summaries)}/{len(summaries)} report={report}")
 

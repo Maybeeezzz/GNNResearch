@@ -39,6 +39,20 @@ def test_virtual_edges_use_only_training_labels():
     assert torch.equal(before, model(changed.x, changed.edge_index).detach())
 
 
+def test_no_virtual_node_variant_keeps_original_graph_and_trains_from_prototypes():
+    data = generate_sbm_graph(num_nodes=90, num_features=8, p_in=0.2, p_out=0.005, seed=17)
+    model = ForwardGNN(8, 16, data.num_classes, num_layers=2, use_virtual_nodes=False)
+    model.bind_graph(data)
+    x, edges = model.augment(data.x, data.edge_index)
+    assert x.shape == data.x.shape
+    assert torch.equal(edges, data.edge_index)
+    assert model(data.x, data.edge_index).shape == (data.x.size(0), data.num_classes)
+    result = train_forwardgnn(model, data, epochs=10, learning_rate=0.01,
+                              patience=-1, verbose=False)
+    assert result.local_backward_passes == 20
+    assert torch.isfinite(model(data.x, data.edge_index)).all()
+
+
 def test_local_loss_does_not_backpropagate_to_previous_layer():
     data, model = graph_and_model()
     x, edges = model.augment(data.x, data.edge_index)

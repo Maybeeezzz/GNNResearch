@@ -1,0 +1,17 @@
+dataset,method,layers,memory_mb_as_reported,table,source
+CitationFull-CiteSeer,bp,1,0.52,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,bp,2,4.01,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,bp,3,6.61,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,bp,4,9.21,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,sf,1,15.51,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,sf,2,15.51,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,sf,3,15.51,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-CiteSeer,sf,4,15.51,6,https://arxiv.org/html/2403.11004v1#A5.T6
+CitationFull-Cora_ML,bp,1,0.83,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,bp,2,7.99,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,bp,3,10.07,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,bp,4,12.58,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,sf,1,41.56,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,sf,2,41.56,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,sf,3,41.56,8,https://arxiv.org/html/2403.11004v1#A5.T8
+CitationFull-Cora_ML,sf,4,41.56,8,https://arxiv.org/html/2403.11004v1#A5.T8

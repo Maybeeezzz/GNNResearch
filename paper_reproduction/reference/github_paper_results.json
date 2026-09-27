@@ -1,0 +1,223 @@
+{
+  "source": "https://arxiv.org/html/2403.11004v1",
+  "accuracy_table": 3,
+  "memory_table": 8,
+  "rows": [
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "bp",
+      "layers": 1,
+      "accuracy_percent": 74.16,
+      "std_percent": 0.5,
+      "memory_mb": 12.41
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "bp",
+      "layers": 2,
+      "accuracy_percent": 74.17,
+      "std_percent": 0.5,
+      "memory_mb": 42.81
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "bp",
+      "layers": 3,
+      "accuracy_percent": 78.76,
+      "std_percent": 6.0,
+      "memory_mb": 73.22
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "bp",
+      "layers": 4,
+      "accuracy_percent": 86.34,
+      "std_percent": 0.2,
+      "memory_mb": 103.62
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "sf",
+      "layers": 1,
+      "accuracy_percent": 85.74,
+      "std_percent": 0.2,
+      "memory_mb": 62.64
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "sf",
+      "layers": 2,
+      "accuracy_percent": 85.9,
+      "std_percent": 0.2,
+      "memory_mb": 62.64
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "sf",
+      "layers": 3,
+      "accuracy_percent": 85.86,
+      "std_percent": 0.2,
+      "memory_mb": 62.64
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GCN",
+      "method": "sf",
+      "layers": 4,
+      "accuracy_percent": 85.87,
+      "std_percent": 0.3,
+      "memory_mb": 62.64
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "bp",
+      "layers": 1,
+      "accuracy_percent": 74.17,
+      "std_percent": 0.5,
+      "memory_mb": 70.46
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "bp",
+      "layers": 2,
+      "accuracy_percent": 74.17,
+      "std_percent": 0.5,
+      "memory_mb": 456.12
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "bp",
+      "layers": 3,
+      "accuracy_percent": 74.17,
+      "std_percent": 0.5,
+      "memory_mb": 842.55
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "bp",
+      "layers": 4,
+      "accuracy_percent": 86.24,
+      "std_percent": 0.2,
+      "memory_mb": 1228.98
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "sf",
+      "layers": 1,
+      "accuracy_percent": 74.29,
+      "std_percent": 0.7,
+      "memory_mb": 444.83
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "sf",
+      "layers": 2,
+      "accuracy_percent": 83.01,
+      "std_percent": 0.8,
+      "memory_mb": 444.83
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "sf",
+      "layers": 3,
+      "accuracy_percent": 83.83,
+      "std_percent": 0.6,
+      "memory_mb": 444.83
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "GAT",
+      "method": "sf",
+      "layers": 4,
+      "accuracy_percent": 84.71,
+      "std_percent": 0.6,
+      "memory_mb": 444.83
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "bp",
+      "layers": 1,
+      "accuracy_percent": 74.17,
+      "std_percent": 0.5,
+      "memory_mb": 19.08
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "bp",
+      "layers": 2,
+      "accuracy_percent": 86.06,
+      "std_percent": 0.3,
+      "memory_mb": 56.54
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "bp",
+      "layers": 3,
+      "accuracy_percent": 86.57,
+      "std_percent": 0.2,
+      "memory_mb": 94.0
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "bp",
+      "layers": 4,
+      "accuracy_percent": 86.71,
+      "std_percent": 0.4,
+      "memory_mb": 131.46
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "sf",
+      "layers": 1,
+      "accuracy_percent": 80.27,
+      "std_percent": 1.4,
+      "memory_mb": 68.1
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "sf",
+      "layers": 2,
+      "accuracy_percent": 81.96,
+      "std_percent": 0.9,
+      "memory_mb": 68.1
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "sf",
+      "layers": 3,
+      "accuracy_percent": 82.92,
+      "std_percent": 0.7,
+      "memory_mb": 68.1
+    },
+    {
+      "dataset": "GitHub",
+      "backbone": "SAGE",
+      "method": "sf",
+      "layers": 4,
+      "accuracy_percent": 83.54,
+      "std_percent": 0.6,
+      "memory_mb": 68.1
+    }
+  ]
+}

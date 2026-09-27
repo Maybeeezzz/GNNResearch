@@ -1,11 +1,11 @@
 # 项目脚本命名与 Python 代码规范
 
-本约定适用于项目自有代码：根目录脚本，以及按任务分类的 `node_classification/`、`graph_level/`、`link_prediction/` 和 `paper_reproduction/`。旧 `gnn/`、`experiments/` 入口已移除。`third_party/` 是上游代码或数据仓库，保留其原始命名和风格，不做批量重命名/格式化，以维持来源可追溯性。
+本约定适用于项目自有代码：根目录脚本，以及按任务分类的 `node_classification/` 和 `paper_reproduction/`。旧 `gnn/`、`experiments/` 入口已移除。`third_party/` 是上游代码或数据仓库，保留其原始命名和风格，不做批量重命名/格式化，以维持来源可追溯性。
 
 ## 文件与标识符命名
 
 - Python 文件统一使用小写 `snake_case.py`。所有当前项目自有 Python 文件都已满足这一形式，因此不为形式统一而改动已被 README、命令行或导入路径引用的文件名。
-- 新脚本用动词说明职责：`train_<scope>.py`、`benchmark_<metric>.py`、`reproduce_<paper_or_result>.py`、`summarize_<result>.py`；实验模块以任务/比较对象命名，如 `local_link_prediction.py`、`compare_sf_ff_graph_tasks.py`。
+- 新脚本用动词说明职责：`train_<scope>.py`、`benchmark_<metric>.py`、`reproduce_<paper_or_result>.py`、`summarize_<result>.py`；实验模块以任务/比较对象命名，如 `vn_ablation.py`、`plot_appendix_results.py`。
 - 测试文件使用 `test_<module_or_behavior>.py`，并与实现模块保持对应。
 - 函数、变量使用 `snake_case`；类使用 `PascalCase`；模块常量使用 `UPPER_SNAKE_CASE`。缩写在文件名中小写（`gnn`、`sf`、`ff`），在正文/报告中可按惯例大写。
 - 命令行公开入口保留 `main()` 和 `if __name__ == "__main__":`，不要让导入模块触发训练或数据下载。

@@ -1,0 +1,90 @@
+{
+  "configuration": {
+    "datasets": [
+      "GitHub"
+    ],
+    "backbones": [
+      "GCN",
+      "GAT"
+    ],
+    "methods": [
+      "sf"
+    ],
+    "max_layers": 1,
+    "runs": 5,
+    "epochs": 1000,
+    "device": "mps",
+    "setting": "github_nodeclass_mps_memory_sf_depth1",
+    "memory_interval": 0.5
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.11.16 (main, Sep  2 2026, 23:33:55) [Clang 21.1.8 ]",
+  "torch": "2.10.0",
+  "pyg": "2.8.0.post1",
+  "device": "mps",
+  "threads": 1,
+  "mps_fallback": false,
+  "memory_monitor": {
+    "interval_seconds": 0.5,
+    "directory": "/Users/maybe/GNN/results/paper_reproduction/memory/github_nodeclass_mps_memory_sf_depth1",
+    "peak_kind": "sampled lower bound",
+    "scope": "worker process"
+  },
+  "upstream_commit": "73fe25720afd0f854e49c099f9c2517c0549617d",
+  "split_commit": "48997da6fc96fd11ee3dfed47e720d942853e729",
+  "split_sha256": {
+    "datasplits/GitHub/node-5splits/test-node-index-split0.pt": "030fcbd596906f70284942c0c51b9995d9f66b6a1d395da87d8871a9fc7ac1cb",
+    "datasplits/GitHub/node-5splits/test-node-index-split1.pt": "0397f980a04fbb06baf0a9ea9c4ffc8d9a3d85adca32cdcd3c9b62635e667d88",
+    "datasplits/GitHub/node-5splits/test-node-index-split2.pt": "3b50fa88ec63bcd8ff5ca2e5f81ab419cae51f8fd24b8ce8496442463f1f0b39",
+    "datasplits/GitHub/node-5splits/test-node-index-split3.pt": "a2f1dda483dccbce1d510b8c9b08d555b4421e5c1a49892f620e848be8edaecc",
+    "datasplits/GitHub/node-5splits/test-node-index-split4.pt": "acdac104c0b6037defa1e1f7aa7d25f1290699c9243ac2eac46b65cd0d910e6a",
+    "datasplits/GitHub/node-5splits/train-node-index-split0.pt": "2788b80b06123bf6a6b17c61e15421ba409a255619990bae10825c8b58ab9584",
+    "datasplits/GitHub/node-5splits/train-node-index-split1.pt": "293a53b49e21ba5ceaaffc8295bee79406158b7ad25b9da5e930939a54304ac1",
+    "datasplits/GitHub/node-5splits/train-node-index-split2.pt": "d618e805d88f17c4f293f163489c5e676021f3b7552a205df6ca6b99dd52f93b",
+    "datasplits/GitHub/node-5splits/train-node-index-split3.pt": "5cdb4365a70ecf0b62e9d871047edf8c3ba78406b906d8b6e0b087bc5f70e7d8",
+    "datasplits/GitHub/node-5splits/train-node-index-split4.pt": "e8431e6f10f7794035c8b63f1f7bd6acfd2326cdd2c22fbba1fa5039edeb7dc3",
+    "datasplits/GitHub/node-5splits/val-node-index-split0.pt": "9bf2ec4e2d734f94217a6190beadca50dff19d8dd719029d083671ce2aa34eb8",
+    "datasplits/GitHub/node-5splits/val-node-index-split1.pt": "67b6fc39725a091cad518cd404df1114e0d85f5914601fc57776364d82ed0e7b",
+    "datasplits/GitHub/node-5splits/val-node-index-split2.pt": "5b6ceabe5c01a8503a849f5409878f3517defdefb2ca07dfa8a7cc5528a6c700",
+    "datasplits/GitHub/node-5splits/val-node-index-split3.pt": "feca42e60143085ffac6deda7c4f977a3708f77bdbb7504d64ce7aed7a5d6d5a",
+    "datasplits/GitHub/node-5splits/val-node-index-split4.pt": "f78e0830ffd7eedaf90d47696c5c0e5a635d68b0e9571d651d1d4ba25a74ab34"
+  },
+  "compatibility": "MPS device selection in train_utils.py and optional import shim for UNUSED legacy cached operators; standard PyG operators unchanged.",
+  "limitations": "Newer PyTorch/PyG and local device; H100 GPU memory/time not reproduced.",
+  "compatibility_file_sha256": {
+    "src/gnn/__init__.py": "f794025aff3eb32d1b7fab205a8984fd27c5fc04208d2098e147ff40cbfa795e",
+    "src/gnn/gnn_conv.py": "0bb4b9f3826cac9b75804916fe579963bf04b97afa8d0199a3d9dcb373f80585",
+    "src/gnn/optional_cached.py": "d56cecdf56b464c0e31a1d42d85dac18d6489d60e14da0f180d83015fdd26b0a",
+    "src/utils/train_utils.py": "667f7af60a252ac961fc8e0ef4387b8f0a7ac39543b10a2cf4d10e43f3a8b95d"
+  },
+  "github_data_provenance": {
+    "source": "author-published ForwardGNN edge splits",
+    "source_repository": "https://github.com/NamyongPark/forwardgnn-datasplits",
+    "node_count": 37700,
+    "directed_edge_count": 578006,
+    "feature_count": 128,
+    "normalized_features": true,
+    "normalization": "Preserve author tensors; do not normalize again",
+    "graph_recovery": "Union of positive train/validation/test edges, made symmetric; all five folds agree exactly",
+    "limitation": "Original edge ordering unavailable; edges sorted by source/destination",
+    "source_sha256": {
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/train_data-split0.pt": "36611420317b06f7e89ff065197c9767ca9b7e83b037f1bc04cf6e71421a55bb",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/val_data-split0.pt": "353b8456677f25c0ef65bd553a340b0cff706a5a80485c6ace5bbdfc259a0dba",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/test_data-split0.pt": "31fc03761392d35717e019b4730c6af6c0fe1d2e5acaa8fb84505a8de24435a8",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/train_data-split1.pt": "8e61dd7698f93fae49748685250c24ba23aae3c6491c67066ae30b6fb75e070e",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/val_data-split1.pt": "13528d4c589b541572455bb658b40e7c9e33aac7c110081b592e341e1bd4453a",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/test_data-split1.pt": "f7043f8c9839d453455b1096c4d449f602b08d24abee3b2c26db56cc67f5affd",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/train_data-split2.pt": "c57defc7d9ebd60eba71926425c7d653186de7053679686d48179087311042dd",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/val_data-split2.pt": "58da88242db00e532bc5d8e12522d4c89a27b949ddd20ffbca7221940a50236a",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/test_data-split2.pt": "9e145765397bf2037ace850ee848f9dc17aa461b9a383e6d3cb3d86a2e2b40ee",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/train_data-split3.pt": "38bdc9224a3d53eab0803a7c18c75180e39b170fab598e3b85a4357d14253f55",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/val_data-split3.pt": "ee8308f5f75ed0c9ca675af65590bda2b7f9ce65f862efd1c2a3c7a489faed70",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/test_data-split3.pt": "549a55cb1d69e0d06a52bd29628d204f8669b24521710e6b5f457b23b6aa3314",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/train_data-split4.pt": "e09738850bc68b77ff324bfa774cde9bb7111f7ac32383da816a60fd93410fb1",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/val_data-split4.pt": "20c34f58a8e717570ca0c934e2dd9ea457e473841fd06a4ba60583f3140be0ed",
+      "third_party/forwardgnn-datasplits/datasplits/GitHub/edge-5splits/test_data-split4.pt": "883df50cbc61ca0aed3c7b183ff07f7c2e9b041b49fb39ddc358c6ded422320b"
+    },
+    "cache_sha256": "bd7ffe4ad33bb72642f331f1d703d9ca2c8dd1e643a541ef5480fc8be1952016",
+    "source_commit": "48997da6fc96fd11ee3dfed47e720d942853e729"
+  }
+}

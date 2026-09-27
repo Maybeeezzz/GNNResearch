@@ -3,7 +3,6 @@ import torch
 from node_classification.data import generate_sbm_graph
 from node_classification.models.gcn import GCN, GraphConvolution, ResidualGCN
 from node_classification.training import classification_metrics, evaluate, macro_f1, train_model
-from node_classification.experiments.baselines.worker import staged_masks
 
 
 def test_graph_convolution_shape_and_gradients():
@@ -79,14 +78,3 @@ def test_macro_f1_and_classification_metrics():
         "train_accuracy", "train_macro_f1", "val_accuracy", "val_macro_f1",
         "test_accuracy", "test_macro_f1",
     }
-
-
-def test_staged_masks_are_disjoint_and_cover_training_nodes():
-    data = generate_sbm_graph(num_nodes=60, num_features=6, seed=9)
-    original = data.train_mask.clone()
-    pretrain, finetune = staged_masks(data, 0.5, seed=9)
-    assert not (pretrain & finetune).any()
-    assert torch.equal(pretrain | finetune, original)
-    for class_id in torch.unique(data.y):
-        assert (pretrain & (data.y == class_id)).any()
-        assert (finetune & (data.y == class_id)).any()
